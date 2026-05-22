@@ -1,0 +1,75 @@
+============================================================
+  MODIFIER LE CONTENU DU SITE CMC SUBSEATEC
+============================================================
+
+Tout le contenu du site (textes, images, vidéo) se trouve dans
+ce dossier "content", organisé par section :
+
+  content/
+    header/     -> logo + menu de navigation
+    hero/       -> grande bannière d'accueil
+    about/      -> section "À propos" + vidéo soudeur
+    projects/   -> carrousel des réalisations
+    video/      -> section vidéo
+    locations/  -> implantations + carte du monde
+    contact/    -> coordonnées
+    footer/     -> bas de page
+
+Chaque dossier contient un fichier "content.json" (les textes)
+et, selon la section, des images.
+
+------------------------------------------------------------
+  MODIFIER UN TEXTE
+------------------------------------------------------------
+1. Ouvrir le fichier "content.json" de la section voulue
+   (avec le Bloc-notes ou un éditeur de texte).
+2. Modifier le texte entre les guillemets " ".
+3. Enregistrer le fichier.
+4. Recharger la page du site.
+
+REGLES IMPORTANTES (sinon le site ne s'affiche plus) :
+  - Ne modifier QUE le texte entre les guillemets " ".
+  - Ne pas supprimer les guillemets, virgules, accolades { } ou crochets [ ].
+  - Si le texte contient un guillemet, l'écrire \"  (avec un antislash).
+  - En cas de doute, vérifier le fichier sur https://jsonlint.com
+
+------------------------------------------------------------
+  REMPLACER UNE IMAGE
+------------------------------------------------------------
+Déposer la nouvelle image dans le dossier de la section, en
+GARDANT EXACTEMENT LE MEME NOM DE FICHIER que l'ancienne.
+Exemples :
+  - Fond du Hero        -> content/hero/background.jpg
+  - Logo                -> content/header/logo.jpg  et  content/footer/logo.jpg
+  - Image vidéo (poster)-> content/video/poster.jpg
+  - Photos des projets  -> content/projects/images/project-1.jpg ... project-7.jpg
+
+Pour AJOUTER un projet : déposer l'image dans content/projects/images/
+puis ajouter un bloc dans projects/content.json (copier un bloc existant).
+
+------------------------------------------------------------
+  SECTION "A PROPOS" : LES ICONES
+------------------------------------------------------------
+Dans about/content.json, chaque "feature" a une "icone".
+Noms d'icônes disponibles :
+  Settings, ShieldCheck, Puzzle, Leaf, Anchor, Ship, Waves,
+  Wrench, HardHat, Award, Globe, Users, Zap, Target, Compass,
+  Cog, Gauge, Recycle
+
+------------------------------------------------------------
+  SECTION "A PROPOS" : CHANGER LA VIDEO DU SOUDEUR
+------------------------------------------------------------
+La vidéo défile image par image au scroll. Pour la changer :
+1. Remplacer le fichier content/about/welder.mp4 par la nouvelle
+   vidéo (en gardant le nom welder.mp4).
+2. Lancer le script "extraire-frames-about.ps1" situé à la racine
+   du projet (clic droit > Exécuter avec PowerShell).
+   Il découpe la vidéo en images et met tout à jour automatiquement.
+
+------------------------------------------------------------
+  CARTE DU MONDE (section Implantations)
+------------------------------------------------------------
+Dans locations/content.json, la liste "marqueurs" place les points
+sur la carte. Chaque marqueur : x et y en pourcentage (0 à 100),
+et "type" : "site" (point orange) ou "projet" (point foncé).
+============================================================

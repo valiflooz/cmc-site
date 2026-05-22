@@ -1,0 +1,17 @@
+{
+  "logo": "logo.jpg",
+  "liens": [
+    { "label": "Legal notice",   "url": "#" },
+    { "label": "Privacy policy", "url": "#" },
+    { "label": "Sitemap",        "url": "#" }
+  ],
+  "copyright": "© CMC SUBSEATEC – All rights reserved 2025",
+  "i18n": {
+    "zh": {
+      "copyright": "© CMC SUBSEATEC – 版权所有 2025"
+    },
+    "tr": {
+      "copyright": "© CMC SUBSEATEC – Tüm hakları saklıdır 2025"
+    }
+  }
+}

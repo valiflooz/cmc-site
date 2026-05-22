@@ -1,0 +1,200 @@
+{
+  "eyebrow": "Projects",
+  "titre": { "ligne1": "Advanced Capability", "ligne2": "", "accent": "achievements" },
+  "bouton": { "label": "View all projects", "ancre": "#realisations" },
+  "projets": [
+    {
+      "nom": "International – Catamaran DSV offshore",
+      "description": "A next-generation Dive Support Vessel concept built on a twin-hull platform for maximum stability and deck space. Designed for offshore and subsea intervention operations in demanding sea states, with dedicated equipment zones and optimised crane reach.",
+      "cover": "1. Catamaran DSV offshore/Concept/titre.jpg",
+      "phases": [
+        {
+          "nom": "Concept",
+          "photos": [
+            "1. Catamaran DSV offshore/Concept/titre.jpg",
+            "1. Catamaran DSV offshore/Concept/CATA OFFSHORE 1.jpg",
+            "1. Catamaran DSV offshore/Concept/CATA OFFSHORE 2.jpg",
+            "1. Catamaran DSV offshore/Concept/CATA OFFSHORE 3.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Brazil – Hyperbaric test chamber",
+      "description": "High-pressure test chamber engineered for the Brazilian Navy's submarine qualification programme. Designed to certify equipment and crew procedures at operational depths, manufactured to DNV-GL standards with full traceability documentation.",
+      "cover": "2. Brazil - Hyperbaric test chamber/Commissioning/titre.jpg",
+      "phases": [
+        {
+          "nom": "Concept",
+          "photos": [
+            "2. Brazil - Hyperbaric test chamber/Concept/HYP 1.jpg",
+            "2. Brazil - Hyperbaric test chamber/Concept/HYP 2.jpg",
+            "2. Brazil - Hyperbaric test chamber/Concept/HYP 3.jpg"
+          ]
+        },
+        {
+          "nom": "Manufacturing",
+          "photos": [
+            "2. Brazil - Hyperbaric test chamber/Manufacturing/DSC01390.JPG",
+            "2. Brazil - Hyperbaric test chamber/Manufacturing/DSC01442.JPG",
+            "2. Brazil - Hyperbaric test chamber/Manufacturing/DSCF4768.jpg"
+          ]
+        },
+        {
+          "nom": "Commissioning",
+          "photos": [
+            "2. Brazil - Hyperbaric test chamber/Commissioning/titre.jpg",
+            "2. Brazil - Hyperbaric test chamber/Commissioning/BRASIL.jpg",
+            "2. Brazil - Hyperbaric test chamber/Commissioning/DSC01831.JPG",
+            "2. Brazil - Hyperbaric test chamber/Commissioning/DSC01922.JPG",
+            "2. Brazil - Hyperbaric test chamber/Commissioning/IMG_0314.JPG",
+            "2. Brazil - Hyperbaric test chamber/Commissioning/photo 1.JPG",
+            "2. Brazil - Hyperbaric test chamber/Commissioning/photo 2.JPG"
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "International – Offshore applications",
+      "description": "A series of structural assemblies and process skids delivered to international operators across multiple offshore fields. Each unit manufactured to client specification with full dimensional control, weld qualification records and classification society approval.",
+      "cover": "3. International - Offshore applications/Manufacturing/titre.jpg",
+      "phases": [
+        {
+          "nom": "Manufacturing",
+          "photos": [
+            "3. International - Offshore applications/Manufacturing/titre.jpg",
+            "3. International - Offshore applications/Manufacturing/DSC01320 bis.JPG",
+            "3. International - Offshore applications/Manufacturing/DSC02266.JPG",
+            "3. International - Offshore applications/Manufacturing/DSC02419.JPG",
+            "3. International - Offshore applications/Manufacturing/DSC02587.JPG",
+            "3. International - Offshore applications/Manufacturing/DSC02846.JPG",
+            "3. International - Offshore applications/Manufacturing/DSCI0027.JPG",
+            "3. International - Offshore applications/Manufacturing/TM02_Essais08.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Norway – Diving system",
+      "description": "CMC300 saturation diving system supplied and commissioned for North Sea operations. Fully integrated with the vessel's DP and life-support systems, certified for deep-water deployment in support of inspection, maintenance and repair missions.",
+      "cover": "4. Norway - Diving system/Commissioning/titre.JPG",
+      "phases": [
+        {
+          "nom": "Concept",
+          "photos": [
+            "4. Norway - Diving system/Concept/CMC300 1.jpg",
+            "4. Norway - Diving system/Concept/CMC300 2.jpg",
+            "4. Norway - Diving system/Concept/CMC300 3.jpg"
+          ]
+        },
+        {
+          "nom": "Commissioning",
+          "photos": [
+            "4. Norway - Diving system/Commissioning/titre.JPG",
+            "4. Norway - Diving system/Commissioning/1637735082619.jpeg",
+            "4. Norway - Diving system/Commissioning/1687919502868.jpeg",
+            "4. Norway - Diving system/Commissioning/1696893782895.jpeg",
+            "4. Norway - Diving system/Commissioning/IMG_3504.JPG",
+            "4. Norway - Diving system/Commissioning/IMG_3554.JPG",
+            "4. Norway - Diving system/Commissioning/IMG_3614.JPG",
+            "4. Norway - Diving system/Commissioning/IMG_3831.JPG",
+            "4. Norway - Diving system/Commissioning/IMG_4315.JPG",
+            "4. Norway - Diving system/Commissioning/IMG_4434.JPG",
+            "4. Norway - Diving system/Commissioning/IMG_4482.JPG",
+            "4. Norway - Diving system/Commissioning/IMG_4493.JPG",
+            "4. Norway - Diving system/Commissioning/IMG_4494.JPG"
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Türkiye – Diving system",
+      "description": "Complete diving support system designed, manufactured and commissioned for the Turkish Navy, deployed aboard a multi-purpose offshore support vessel. Full project scope from engineering to sea trials, with an on-site commissioning team.",
+      "cover": "5. Turkiye - Diving system/Commissioning/titre.jpg",
+      "phases": [
+        {
+          "nom": "Concept",
+          "photos": [
+            "5. Turkiye - Diving system/Concept/CMC300 1.jpg",
+            "5. Turkiye - Diving system/Concept/CMC300 2.jpg",
+            "5. Turkiye - Diving system/Concept/CMC300 3.jpg"
+          ]
+        },
+        {
+          "nom": "Commissioning",
+          "photos": [
+            "5. Turkiye - Diving system/Commissioning/titre.jpg",
+            "5. Turkiye - Diving system/Commissioning/11564515.jpg",
+            "5. Turkiye - Diving system/Commissioning/2018-EKIM-20181007_2_32739232_37876781.jpg",
+            "5. Turkiye - Diving system/Commissioning/2018-EKIM-20181007_2_32739232_37876804.jpg",
+            "5. Turkiye - Diving system/Commissioning/DSC01934.JPG",
+            "5. Turkiye - Diving system/Commissioning/DSC02277.JPG",
+            "5. Turkiye - Diving system/Commissioning/DSC02291.JPG",
+            "5. Turkiye - Diving system/Commissioning/DSC02309.JPG",
+            "5. Turkiye - Diving system/Commissioning/IMG_1336.JPG",
+            "5. Turkiye - Diving system/Commissioning/IMG_2005.jpg",
+            "5. Turkiye - Diving system/Commissioning/IMG_2424.JPG",
+            "5. Turkiye - Diving system/Commissioning/IMG_2546.JPG",
+            "5. Turkiye - Diving system/Commissioning/IMG_2632.JPG",
+            "5. Turkiye - Diving system/Commissioning/IMG_2635.JPG",
+            "5. Turkiye - Diving system/Commissioning/IMG_2913.JPG",
+            "5. Turkiye - Diving system/Commissioning/IMG_2921.JPG",
+            "5. Turkiye - Diving system/Commissioning/IMG_2947.JPG",
+            "5. Turkiye - Diving system/Commissioning/IMG_2975.JPG",
+            "5. Turkiye - Diving system/Commissioning/IMG_2977.JPG",
+            "5. Turkiye - Diving system/Commissioning/IMG_3122.JPG",
+            "5. Turkiye - Diving system/Commissioning/IMG_3218.JPG",
+            "5. Turkiye - Diving system/Commissioning/MOSHIP.jpg",
+            "5. Turkiye - Diving system/Commissioning/TUR 3.jpeg",
+            "5. Turkiye - Diving system/Commissioning/TUR 4.jpeg",
+            "5. Turkiye - Diving system/Commissioning/TUR 6.jpeg",
+            "5. Turkiye - Diving system/Commissioning/TUR 7.jpeg"
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "International – Subsea discovering",
+      "description": "Concept design for a next-generation manned submersible platform dedicated to deep-sea exploration and scientific survey missions. Engineered for extended autonomy at depth, with optimised hydrodynamics, panoramic observation systems and modular payload integration.",
+      "cover": "6. International - Subsea discovering/titre.jpeg",
+      "phases": [
+        {
+          "nom": "Concept",
+          "photos": [
+            "6. International - Subsea discovering/titre.jpeg",
+            "6. International - Subsea discovering/TRITON SUB 1.png",
+            "6. International - Subsea discovering/TRITON SUB 3.png"
+          ]
+        }
+      ]
+    }
+  ],
+  "i18n": {
+    "zh": {
+      "eyebrow": "项目案例",
+      "titre": { "ligne1": "先进能力", "accent": "项目成就" },
+      "bouton": { "label": "查看所有项目" },
+      "projets": [
+        { "description": "基于双体船平台的新一代潜水支持船概念，具有最大稳定性和甲板空间。专为苛刻海况下的海洋及海底干预作业设计，配备专用设备区域及优化吊机覆盖范围。" },
+        { "description": "为巴西海军潜艇资质认证项目设计的高压测试舱。用于对操作深度下的设备和人员程序进行认证，按DNV-GL标准制造，附全套可追溯性文档。" },
+        { "description": "为多个海上油气田国际运营商交付的一系列结构组件和工艺橇块。每台设备按客户规范制造，附全尺寸控制、焊接资质记录及船级社批准文件。" },
+        { "description": "为北海作业提供并调试的CMC300饱和潜水系统。与船舶DP及生命支持系统完全集成，通过深水部署认证，支持检测、维护及修复任务。" },
+        { "description": "为土耳其海军设计、制造并调试的完整潜水支持系统，部署于多用途海上支持船。项目涵盖从工程设计到海上试验的完整范围，配备现场调试团队。" },
+        { "description": "下一代载人潜水器平台的概念设计，专用于深海勘探和科学调查任务。以深度自持、优化水动力学、全景观测系统及模块化载荷集成为核心工程目标。" }
+      ]
+    },
+    "tr": {
+      "eyebrow": "Projeler",
+      "titre": { "ligne1": "Gelişmiş Yetenek", "accent": "başarılar" },
+      "bouton": { "label": "Tüm Projeleri Görüntüle" },
+      "projets": [
+        { "description": "Maksimum stabilite ve güverte alanı için çift gövdeli platform üzerine inşa edilmiş yeni nesil Dalış Destek Gemisi konsepti. Zorlu deniz koşullarında açık deniz ve sualtı müdahale operasyonları için tasarlanmış, özel ekipman alanları ve optimize edilmiş vinç erişimi ile." },
+        { "description": "Brezilya Deniz Kuvvetleri'nin denizaltı yeterlilik programı için tasarlanan yüksek basınç test odası. Operasyonel derinliklerde ekipman ve ekip prosedürlerini sertifikalandırmak amacıyla üretilmiş, tam izlenebilirlik belgeleri ile DNV-GL standartlarına uygun." },
+        { "description": "Birden fazla açık deniz sahasındaki uluslararası operatörlere teslim edilen yapısal montajlar ve proses skid serileri. Her ünite müşteri spesifikasyonuna göre üretilmiş, tam boyut kontrolü, kaynak yeterlilik kayıtları ve sınıflandırma kuruluşu onayı ile." },
+        { "description": "Kuzey Denizi operasyonları için tedarik edilen ve devreye alınan CMC300 doygunluk dalış sistemi. Geminin DP ve yaşam destek sistemleriyle tam entegre, derin su konuşlanması için sertifikalı; inceleme, bakım ve onarım görevlerini destekler." },
+        { "description": "Türk Deniz Kuvvetleri için tasarlanan, üretilen ve devreye alınan tam dalış destek sistemi, çok amaçlı açık deniz destek gemisine konuşlandırıldı. Mühendislikten deniz denemelerine kadar tam proje kapsamı, saha devreye alma ekibiyle." },
+        { "description": "Derin deniz keşfi ve bilimsel araştırma görevlerine adanmış yeni nesil insanlı denizaltı platformu için konsept tasarım. Derinlikte uzun süreli özerklik, optimize edilmiş hidrodinamik, panoramik gözlem sistemleri ve modüler yük entegrasyonu için mühendislik çalışması." }
+      ]
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "titreLignes": [
+    { "texte": "Concept",        "accent": false },
+    { "texte": "Manufacturing",  "accent": false },
+    { "texte": "Commissioning",  "accent": true  }
+  ],
+  "sousTitre": "Systems engineered for maritime missions.",
+  "bouton": { "label": "Discover our expertise", "ancre": "#apropos" },
+  "fond": "background.jpg",
+  "i18n": {
+    "zh": {
+      "titreLignes": [
+        { "texte": "概念设计" },
+        { "texte": "制造生产" },
+        { "texte": "调试交付" }
+      ],
+      "sousTitre": "专为海洋任务而设计的工程系统。",
+      "bouton": { "label": "探索我们的专业能力" }
+    },
+    "tr": {
+      "titreLignes": [
+        { "texte": "Konsept" },
+        { "texte": "Üretim" },
+        { "texte": "Devreye Alma" }
+      ],
+      "sousTitre": "Denizcilik görevleri için tasarlanmış mühendislik sistemleri.",
+      "bouton": { "label": "Uzmanlığımızı Keşfedin" }
+    }
+  }
+}

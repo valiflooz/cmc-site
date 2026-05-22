@@ -1,0 +1,50 @@
+{
+  "eyebrow": "Contact",
+  "titre": { "avant": "Start a ", "accent": "project" },
+  "paragraphe": "Tell us what you're building. Our teams are ready to listen. Contact us to discuss your needs.",
+  "email": "contact@cmc-subseatec.com",
+  "adresse": "UAE",
+  "boutonFormulaire": "Send message",
+  "formulaire": {
+    "nom": "Full name",
+    "societe": "Company",
+    "email": "Email",
+    "telephone": "Phone",
+    "message": "Your message"
+  },
+  "ceo": {
+    "photo": "CEO.jpg",
+    "nom": "Eric Guillermet",
+    "fonction": "Chief Executive Officer"
+  },
+  "i18n": {
+    "zh": {
+      "eyebrow": "联系我们",
+      "titre": { "avant": "开启", "accent": "项目" },
+      "paragraphe": "告诉我们您正在构建什么。我们的团队随时准备倾听。请联系我们，共同探讨您的需求。",
+      "boutonFormulaire": "发送信息",
+      "formulaire": {
+        "nom": "姓名",
+        "societe": "公司",
+        "email": "电子邮箱",
+        "telephone": "电话",
+        "message": "您的留言"
+      },
+      "ceo": { "fonction": "首席执行官" }
+    },
+    "tr": {
+      "eyebrow": "İletişim",
+      "titre": { "avant": "Bir ", "accent": "proje başlat" },
+      "paragraphe": "Ne inşa ettiğinizi bize anlatın. Ekiplerimiz dinlemeye hazır. İhtiyaçlarınızı görüşmek için bizimle iletişime geçin.",
+      "boutonFormulaire": "Mesaj Gönder",
+      "formulaire": {
+        "nom": "Ad Soyad",
+        "societe": "Şirket",
+        "email": "E-posta",
+        "telephone": "Telefon",
+        "message": "Mesajınız"
+      },
+      "ceo": { "fonction": "İcra Kurulu Başkanı" }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "logo": "logo.jpg",
+  "liens": [
+    { "label": "About",     "ancre": "#apropos" },
+    { "label": "Projects",  "ancre": "#realisations" },
+    { "label": "Video",     "ancre": "#video" },
+    { "label": "Locations", "ancre": "#implantations" },
+    { "label": "Contact",   "ancre": "#contact" }
+  ],
+  "boutonContact": { "label": "Contact us", "ancre": "#contact" },
+  "langue": "EN",
+  "i18n": {
+    "zh": {
+      "liens": [
+        { "label": "关于我们" },
+        { "label": "项目案例" },
+        { "label": "视频" },
+        { "label": "分布地点" },
+        { "label": "联系我们" }
+      ],
+      "boutonContact": { "label": "联系我们" }
+    },
+    "tr": {
+      "liens": [
+        { "label": "Hakkımızda" },
+        { "label": "Projeler" },
+        { "label": "Video" },
+        { "label": "Lokasyonlar" },
+        { "label": "İletişim" }
+      ],
+      "boutonContact": { "label": "Bize Ulaşın" }
+    }
+  }
+}

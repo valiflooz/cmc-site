@@ -1,0 +1,21 @@
+{
+  "eyebrow": "Video",
+  "titre": { "ligne1": "Our projects", "ligne2": "", "accent": "in action" },
+  "paragraphe": "Discover our expertise, our teams and our achievements around the world.",
+  "bouton": { "label": "Watch the video", "ancre": "#video" },
+  "poster": "poster.jpg",
+  "i18n": {
+    "zh": {
+      "eyebrow": "视频",
+      "titre": { "ligne1": "我们的项目", "accent": "实况" },
+      "paragraphe": "探索我们的专业技术、团队及全球项目成就。",
+      "bouton": { "label": "观看视频" }
+    },
+    "tr": {
+      "eyebrow": "Video",
+      "titre": { "ligne1": "Projelerimiz", "accent": "uygulamada" },
+      "paragraphe": "Uzmanlığımızı, ekiplerimizi ve dünya genelindeki başarılarımızı keşfedin.",
+      "bouton": { "label": "Videoyu İzle" }
+    }
+  }
+}
