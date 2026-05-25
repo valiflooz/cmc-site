@@ -8,6 +8,7 @@ export default function Contact() {
   const c = useContent('contact')
   const [status, setStatus] = useState('idle') // idle | sending | success | error
   const [errors, setErrors] = useState({})
+  const [errorDetail, setErrorDetail] = useState('')
 
   const clearError = (field) => {
     if (errors[field]) setErrors(prev => ({ ...prev, [field]: false }))
@@ -38,14 +39,19 @@ export default function Contact() {
         body: data,
         headers: { Accept: 'application/json' },
       })
+      const json = await res.json().catch(() => ({}))
       if (res.ok) {
         setStatus('success')
         e.target.reset()
       } else {
+        console.error('Formspree error', res.status, json)
         setStatus('error')
+        setErrorDetail(json?.errors?.map(e => e.message).join(' ') || `HTTP ${res.status}`)
       }
-    } catch {
+    } catch (err) {
+      console.error('Formspree fetch failed', err)
       setStatus('error')
+      setErrorDetail(err.message)
     }
   }
 
@@ -131,6 +137,7 @@ export default function Contact() {
               <div className="form-feedback form-feedback--err">
                 <AlertCircle size={16} />
                 Something went wrong. Please try again or email us directly.
+                {errorDetail && <span style={{ display: 'block', fontSize: '11px', marginTop: '4px', opacity: 0.75 }}>{errorDetail}</span>}
               </div>
             )}
 
