@@ -947,8 +947,7 @@ ul { list-style: none; }
 .contact-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 16px;
-  row-gap: 8px;
+  gap: 16px;
   align-content: start;
 }
 .contact-form input,

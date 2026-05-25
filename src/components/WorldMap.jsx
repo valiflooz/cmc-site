@@ -169,29 +169,16 @@ export default function WorldMap({ marqueurs = [] }) {
       }
     }
 
-    /* 2 — Draw all normal dots in ONE path (huge perf gain) */
-    const repelledSet = new Set(repelled)
+    /* 2 — Draw all dots in ONE path */
     ctx.beginPath()
     for (const dot of dotsRef.current) {
-      if (dot.scale <= 0 || repelledSet.has(dot)) continue
+      if (dot.scale <= 0) continue
       const r = DOT_RADIUS * dot.scale
       ctx.moveTo(dot.x + r, dot.y)
       ctx.arc(dot.x, dot.y, r, 0, Math.PI * 2)
     }
     ctx.fillStyle = '#7a8694'
     ctx.fill()
-
-    /* 3 — Draw repelled dots in ONE path (lighter) */
-    if (repelled.length) {
-      ctx.beginPath()
-      for (const dot of repelled) {
-        const r = DOT_RADIUS * dot.scale * 1.25
-        ctx.moveTo(dot.x + r, dot.y)
-        ctx.arc(dot.x, dot.y, r, 0, Math.PI * 2)
-      }
-      ctx.fillStyle = '#b8c8d8'
-      ctx.fill()
-    }
 
     if (!allRevRef.current && elapsed > WAVE_SPREAD + DOT_POP_DUR + 100) {
       allRevRef.current = true
