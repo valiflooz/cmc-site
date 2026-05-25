@@ -20,7 +20,9 @@ export default function Contact() {
     // Validation des champs obligatoires
     const newErrors = {}
     if (!data.get('name')?.trim())    newErrors.name    = true
+    if (!data.get('company')?.trim()) newErrors.company = true
     if (!data.get('email')?.trim())   newErrors.email   = true
+    if (!data.get('phone')?.trim())   newErrors.phone   = true
     if (!data.get('message')?.trim()) newErrors.message = true
 
     if (Object.keys(newErrors).length > 0) {
@@ -95,6 +97,8 @@ export default function Contact() {
               type="text"
               name="company"
               placeholder={c.formulaire.societe}
+              className={errors.company ? 'field-error' : ''}
+              onChange={() => clearError('company')}
             />
             <input
               type="email"
@@ -107,6 +111,8 @@ export default function Contact() {
               type="tel"
               name="phone"
               placeholder={c.formulaire.telephone}
+              className={errors.phone ? 'field-error' : ''}
+              onChange={() => clearError('phone')}
             />
             <textarea
               name="message"
