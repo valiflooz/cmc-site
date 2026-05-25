@@ -1,4 +1,3 @@
-import { ArrowRight } from 'lucide-react'
 import { useContent } from '../content.jsx'
 import SectionTitle from './SectionTitle.jsx'
 import WorldMap from './WorldMap.jsx'
@@ -23,10 +22,6 @@ export default function Locations() {
             ))}
           </div>
 
-          <a href={c.bouton.ancre} className="btn btn-orange-outline">
-            {c.bouton.label}
-            <span className="btn-arrow"><ArrowRight size={16} /></span>
-          </a>
         </div>
 
         <WorldMap marqueurs={c.marqueurs} />

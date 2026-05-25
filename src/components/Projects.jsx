@@ -3,6 +3,7 @@ import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react'
 import { useContent } from '../content.jsx'
 import SectionTitle from './SectionTitle.jsx'
 import ProjectModal, { projectImgUrl, splitNom } from './ProjectModal.jsx'
+import AllProjectsModal from './AllProjectsModal.jsx'
 
 export default function Projects() {
   const c = useContent('projects')
@@ -11,7 +12,8 @@ export default function Projects() {
   const [index, setIndex] = useState(0)
   const [step, setStep] = useState(0)
   const [perView, setPerView] = useState(4)
-  const [activeProject, setActiveProject] = useState(null)
+  const [activeProject,   setActiveProject]   = useState(null)
+  const [showAllProjects, setShowAllProjects] = useState(false)
 
   // Précharge les photos d'un projet au survol de la carte
   const preloadProject = (p) => {
@@ -49,10 +51,13 @@ export default function Projects() {
             <p className="eyebrow">{c.eyebrow}</p>
             <SectionTitle titre={c.titre} />
           </div>
-          <a href={c.bouton.ancre} className="btn btn-outline">
+          <button
+            className="btn btn-outline"
+            onClick={() => setShowAllProjects(true)}
+          >
             {c.bouton.label}
             <span className="btn-arrow"><ArrowRight size={16} /></span>
-          </a>
+          </button>
         </div>
 
         <div className="projects-viewport">
@@ -123,6 +128,10 @@ export default function Projects() {
           project={activeProject}
           onClose={() => setActiveProject(null)}
         />
+      )}
+
+      {showAllProjects && (
+        <AllProjectsModal onClose={() => setShowAllProjects(false)} />
       )}
     </section>
   )

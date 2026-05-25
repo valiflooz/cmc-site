@@ -1,6 +1,6 @@
 {
   "eyebrow": "Locations & projects",
-  "titre": { "ligne1": "", "ligne2": "Where the mission is, ", "accent": "we are." },
+  "titre": { "ligne1": "Where the mission is,", "ligne2": "", "accent": "we are." },
   "paragraphe": "CMC SUBSEATEC operates on every continent for demanding offshore projects. Our global presence ensures responsiveness, proximity and performance.",
   "stats": [
     { "nombre": "12+", "label": "Countries" },
@@ -15,7 +15,7 @@
   "i18n": {
     "zh": {
       "eyebrow": "地点与项目",
-      "titre": { "ligne2": "使命所在，", "accent": "我们在场。" },
+      "titre": { "ligne1": "使命所在，", "ligne2": "", "accent": "我们在场。" },
       "paragraphe": "CMC SUBSEATEC在每个大洲承接严苛的海洋工程项目。我们的全球布局确保了快速响应、就近服务与卓越绩效。",
       "stats": [
         { "label": "个国家" },
@@ -26,7 +26,7 @@
     },
     "tr": {
       "eyebrow": "Lokasyonlar & Projeler",
-      "titre": { "ligne2": "Görev neredeyse, ", "accent": "biz oradayız." },
+      "titre": { "ligne1": "Görev neredeyse,", "ligne2": "", "accent": "biz oradayız." },
       "paragraphe": "CMC SUBSEATEC, zorlu açık deniz projeleri için her kıtada faaliyet göstermektedir. Küresel varlığımız hız, yakınlık ve performansı güvence altına alır.",
       "stats": [
         { "label": "Ülke" },

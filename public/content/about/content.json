@@ -1,8 +1,8 @@
 {
   "eyebrow": "Our history",
   "titre": { "ligne1": "40 years of", "ligne2": "", "accent": "engineering" },
-  "paragraphe": "After 40 years of unique history, including work as a subcontractor for COMEX, CMC INDUSTRIES became CMC SUBSEATEC â€” with a focused presence in the Navy, Offshore, Hydrography, Environment, Research and Recovery markets.",
-  "citation": "Our organisation has adapted to globalisation by deploying our teams in our customers' countries for better responsiveness â€” working with local subcontractors and trusted partners to remain efficient and optimise costs.",
+  "paragraphe": "After 40 years of unique history, including work as a subcontractor for COMEX, CMC INDUSTRIES became CMC SUBSEATEC — with a focused presence in the Navy, Offshore, Hydrography, Environment, Research and Recovery markets.",
+  "citation": "Our organisation has adapted to globalisation by deploying our teams in our customers' countries for better responsiveness — working with local subcontractors and trusted partners to remain efficient and optimise costs.",
   "certifications": [
     { "label": "DNV-GL", "detail": "Certified & Classified" },
     { "label": "LR",     "detail": "Rules" },
@@ -11,23 +11,23 @@
   "video": { "dossierFrames": "frames", "nombreFrames": 121 },
   "i18n": {
     "zh": {
-      "eyebrow": "æˆ‘ä»¬çš„åŽ†å²",
-      "titre": { "ligne1": "40å¹´", "accent": "å·¥ç¨‹ç»éªŒ" },
-      "paragraphe": "åŽ†ç»40å¹´éžå‡¡åŽ†ç¨‹ï¼Œæ›¾ä½œä¸ºCOMEXçš„åˆ†åŒ…å•†ï¼ŒCMC INDUSTRIESæ­£å¼æ›´åä¸ºCMC SUBSEATECâ€”â€”ä¸“æ³¨äºŽæµ·å†›ã€æµ·æ´‹å·¥ç¨‹ã€æ°´æ–‡å‹˜æµ‹ã€çŽ¯å¢ƒä¿æŠ¤ã€ç§‘ç ”å‹˜æŽ¢åŠæ‰“æžæ•‘æ´å¸‚åœºã€‚",
-      "citation": "æˆ‘ä»¬é€šè¿‡åœ¨å®¢æˆ·æ‰€åœ¨å›½éƒ¨ç½²å›¢é˜Ÿæ¥é€‚åº”å…¨çƒåŒ–è¿›ç¨‹ï¼Œå®žçŽ°æ›´å¿«é€Ÿçš„å“åº”â€”â€”ä¸Žæœ¬åœ°åˆ†åŒ…å•†å’Œå¯é åˆä½œä¼™ä¼´åä½œï¼Œä¿æŒé«˜æ•ˆè¿è¥å¹¶ä¼˜åŒ–æˆæœ¬ã€‚",
+      "eyebrow": "我们的历史",
+      "titre": { "ligne1": "40年", "accent": "工程经验" },
+      "paragraphe": "历经40年非凡历程，曾作为COMEX的分包商，CMC INDUSTRIES正式更名为CMC SUBSEATEC——专注于海军、海洋工程、水文勘测、环境保护、科研勘探及打捞救援市场。",
+      "citation": "我们通过在客户所在国部署团队来适应全球化进程，实现更快速的响应——与本地分包商和可靠合作伙伴协作，保持高效运营并优化成本。",
       "certifications": [
-        { "detail": "è®¤è¯ä¸Žåˆ†çº§" },
-        { "detail": "è§„èŒƒè®¤å¯" },
-        { "detail": "è§„èŒƒè®¤å¯" }
+        { "detail": "认证与分级" },
+        { "detail": "规范认可" },
+        { "detail": "规范认可" }
       ]
     },
     "tr": {
-      "eyebrow": "TarihÃ§emiz",
-      "titre": { "ligne1": "40 yÄ±llÄ±k", "accent": "mÃ¼hendislik" },
-      "paragraphe": "40 yÄ±llÄ±k Ã¶zgÃ¼n tarihinin ardÄ±ndan, COMEX'in alt yÃ¼klenicisi olarak da faaliyet gÃ¶steren CMC INDUSTRIES, CMC SUBSEATEC adÄ±nÄ± aldÄ± â€” Deniz Kuvvetleri, AÃ§Ä±k Deniz, Hidrografi, Ã‡evre, AraÅŸtÄ±rma ve Kurtarma pazarlarÄ±nda odaklÄ± bir varlÄ±kla.",
-      "citation": "Organizasyonumuz, mÃ¼ÅŸterilerimizin Ã¼lkelerine ekip konuÅŸlandÄ±rarak kÃ¼reselleÅŸmeye uyum saÄŸladÄ± â€” yerel alt yÃ¼kleniciler ve gÃ¼venilir iÅŸ ortaklarÄ±yla Ã§alÄ±ÅŸarak verimliliÄŸi korumak ve maliyetleri optimize etmek amacÄ±yla.",
+      "eyebrow": "Tarihçemiz",
+      "titre": { "ligne1": "40 yıllık", "accent": "mühendislik" },
+      "paragraphe": "40 yıllık özgün tarihinin ardından, COMEX'in alt yüklenicisi olarak da faaliyet gösteren CMC INDUSTRIES, CMC SUBSEATEC adını aldı — Deniz Kuvvetleri, Açık Deniz, Hidrografi, Çevre, Araştırma ve Kurtarma pazarlarında odaklı bir varlıkla.",
+      "citation": "Organizasyonumuz, müşterilerimizin ülkelerine ekip konuşlandırarak küreselleşmeye uyum sağladı — yerel alt yükleniciler ve güvenilir iş ortaklarıyla çalışarak verimliliği korumak ve maliyetleri optimize etmek amacıyla.",
       "certifications": [
-        { "detail": "SertifikalÄ± ve SÄ±nÄ±flandÄ±rÄ±lmÄ±ÅŸ" },
+        { "detail": "Sertifikalı ve Sınıflandırılmış" },
         { "detail": "Kurallar" },
         { "detail": "Kurallar" }
       ]

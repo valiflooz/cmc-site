@@ -1,7 +1,9 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import { X, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const PHASE_ORDER = ['Concept', 'Manufacturing', 'Commissioning']
+const PANEL_DUR = 200
+const LB_DUR    = 160
 
 export function projectImgUrl(path) {
   return '/content/projects/' + path.split('/').map(encodeURIComponent).join('/')
@@ -15,18 +17,35 @@ export function splitNom(nom) {
 }
 
 export default function ProjectModal({ project, onClose }) {
-  const [activePhase, setActivePhase]   = useState(project.phases[0]?.nom || '')
+  const [activePhase, setActivePhase]     = useState(project.phases[0]?.nom || '')
   const [lightboxIndex, setLightboxIndex] = useState(null)
+  const [panelClosing, setPanelClosing]   = useState(false)
+  const [lbClosing, setLbClosing]         = useState(false)
 
   const { titre, lieu } = splitNom(project.nom)
   const orderedPhases   = PHASE_ORDER.filter(ph => project.phases.some(p => p.nom === ph))
   const currentPhotos   = project.phases.find(p => p.nom === activePhase)?.photos || []
   const photosRef       = useRef(currentPhotos)
 
-  // Ferme le lightbox et précharge toutes les photos de la phase active
+  // ── Ferme le panneau principal avec animation ──
+  const closePanel = useCallback(() => {
+    setPanelClosing(true)
+    setTimeout(onClose, PANEL_DUR)
+  }, [onClose])
+
+  // ── Ferme le lightbox avec animation ──
+  const closeLightbox = useCallback(() => {
+    setLbClosing(true)
+    setTimeout(() => {
+      setLightboxIndex(null)
+      setLbClosing(false)
+    }, LB_DUR)
+  }, [])
+
+  // Mise à jour ref photos + fermeture immédiate du lightbox au changement de phase
   useEffect(() => {
     photosRef.current = currentPhotos
-    setLightboxIndex(null)
+    setLightboxIndex(null)   // pas d'animation, changement de phase
     currentPhotos.forEach(path => { new Image().src = projectImgUrl(path) })
   }, [activePhase]) // eslint-disable-line
 
@@ -53,8 +72,8 @@ export default function ProjectModal({ project, onClose }) {
   useEffect(() => {
     const onKey = (e) => {
       if (e.key === 'Escape') {
-        if (lightboxIndex !== null) setLightboxIndex(null)
-        else onClose()
+        if (lightboxIndex !== null) closeLightbox()
+        else closePanel()
         return
       }
       if (lightboxIndex !== null) {
@@ -64,23 +83,26 @@ export default function ProjectModal({ project, onClose }) {
     }
     document.addEventListener('keydown', onKey)
     return () => document.removeEventListener('keydown', onKey)
-  }, [onClose, lightboxIndex])
+  }, [closePanel, closeLightbox, lightboxIndex])
 
   return (
     <>
       {/* ── Modal ─────────────────────────────────────── */}
       <div
-        className="modal-overlay"
-        onClick={lightboxIndex !== null ? undefined : onClose}
+        className={`modal-overlay${panelClosing ? ' is-closing' : ''}`}
+        onClick={lightboxIndex !== null ? undefined : closePanel}
       >
-        <div className="modal-panel" onClick={e => e.stopPropagation()}>
+        <div
+          className={`modal-panel${panelClosing ? ' is-closing' : ''}`}
+          onClick={e => e.stopPropagation()}
+        >
 
           <div className="modal-header">
             <div>
               <h3 className="modal-title">{titre}</h3>
               {lieu && <p className="modal-lieu">{lieu}</p>}
             </div>
-            <button className="modal-close" onClick={onClose} aria-label="Close">
+            <button className="modal-close" onClick={closePanel} aria-label="Close">
               <X size={22} />
             </button>
           </div>
@@ -100,7 +122,8 @@ export default function ProjectModal({ project, onClose }) {
           )}
 
           <div className="modal-body">
-            <div className="modal-gallery">
+            {/* key = activePhase déclenche la ré-animation à chaque changement d'onglet */}
+            <div className="modal-gallery" key={activePhase}>
               {currentPhotos.map((photo, i) => (
                 <img
                   key={i}
@@ -124,8 +147,11 @@ export default function ProjectModal({ project, onClose }) {
       </div>
 
       {/* ── Lightbox ──────────────────────────────────── */}
-      {lightboxIndex !== null && (
-        <div className="lightbox-overlay" onClick={() => setLightboxIndex(null)}>
+      {(lightboxIndex !== null || lbClosing) && (
+        <div
+          className={`lightbox-overlay${lbClosing ? ' is-closing' : ''}`}
+          onClick={closeLightbox}
+        >
           <button
             className="lightbox-nav lightbox-prev"
             onClick={e => { e.stopPropagation(); setLightboxIndex(i => Math.max(i - 1, 0)) }}
@@ -135,8 +161,10 @@ export default function ProjectModal({ project, onClose }) {
             <ChevronLeft size={36} />
           </button>
 
+          {/* key = lightboxIndex déclenche l'animation imgIn à chaque changement de photo */}
           <img
-            src={projectImgUrl(currentPhotos[lightboxIndex])}
+            key={lightboxIndex}
+            src={projectImgUrl(currentPhotos[lightboxIndex ?? 0])}
             alt=""
             className="lightbox-img"
             onClick={e => e.stopPropagation()}
@@ -153,14 +181,14 @@ export default function ProjectModal({ project, onClose }) {
 
           <button
             className="lightbox-close"
-            onClick={() => setLightboxIndex(null)}
+            onClick={closeLightbox}
             aria-label="Close lightbox"
           >
             <X size={22} />
           </button>
 
           <span className="lightbox-counter">
-            {lightboxIndex + 1} / {currentPhotos.length}
+            {(lightboxIndex ?? 0) + 1} / {currentPhotos.length}
           </span>
         </div>
       )}

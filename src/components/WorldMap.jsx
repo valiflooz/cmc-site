@@ -337,10 +337,6 @@ export default function WorldMap({ marqueurs = [] }) {
   return (
     <div className="map-wrap" ref={wrapperRef}>
       <canvas ref={canvasRef} style={{ width: '100%', display: 'block', borderRadius: '8px' }} />
-      <div className="map-legend">
-        <span className="legend-item"><span className="legend-dot legend-dot--office" />CMC Offices</span>
-        <span className="legend-item"><span className="legend-dot legend-dot--project" />Projects</span>
-      </div>
     </div>
   )
 }
