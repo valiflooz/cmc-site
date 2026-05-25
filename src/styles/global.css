@@ -1132,6 +1132,38 @@ ul { list-style: none; }
 .legend-dot--office  { background: var(--orange); box-shadow: 0 0 6px rgba(233,139,46,0.5); }
 .legend-dot--project { background: rgba(180,210,240,0.8); }
 
+/* ── Bande partenaires ── */
+.partners-strip {
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+.partners-label {
+  text-align: center;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: var(--txt-muted-light);
+  margin-bottom: 28px;
+}
+.partners-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 28px 44px;
+}
+.partner-logo {
+  height: 38px;
+  width: auto;
+  max-width: 130px;
+  object-fit: contain;
+  filter: grayscale(1) opacity(0.5);
+  transition: filter 0.25s;
+}
+.partner-logo:hover { filter: grayscale(0) opacity(1); }
+
 /* ============================================================
    CONTACT
    ============================================================ */

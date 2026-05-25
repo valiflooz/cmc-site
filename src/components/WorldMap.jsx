@@ -1,8 +1,6 @@
 import { useRef, useEffect, useCallback } from 'react'
 import * as d3 from 'd3-geo'
 import * as topojson from 'topojson-client'
-import { useContent } from '../content.jsx'
-import { splitNom } from './ProjectModal.jsx'
 
 /* ── Constants ───────────────────────────────────────────────────── */
 const DOT_RADIUS     = 1.6
@@ -14,20 +12,6 @@ const ZOOM_RADIUS    = 40
 const WAVE_SPREAD    = 2800
 const DOT_POP_DUR    = 500
 
-/* ── Country lat/lng for dynamic project markers ─────────────────── */
-const COUNTRY_LATLNG = {
-  'Norway':   { lat:  62, lng:  10, ox:  12, oy: -18 },
-  'France':   { lat:  46, lng:   2, ox: -12, oy: -18 },
-  'Türkiye':  { lat:  39, lng:  35, ox:  12, oy: -18 },
-  'Turkey':   { lat:  39, lng:  35, ox:  12, oy: -18 },
-  'UAE':      { lat:  24, lng:  54, ox:  12, oy: -18 },
-  'Brazil':   { lat: -10, lng: -53, ox:  12, oy: -18 },
-  'USA':      { lat:  38, lng: -97, ox:   0, oy: -18 },
-  'UK':       { lat:  54, lng:  -3, ox: -12, oy: -18 },
-  'Australia':{ lat: -25, lng: 133, ox:  12, oy: -18 },
-  'Japan':    { lat:  36, lng: 138, ox:  12, oy: -18 },
-}
-
 /* ── Easing ──────────────────────────────────────────────────────── */
 function backOut(t) {
   if (t <= 0) return 0
@@ -38,7 +22,6 @@ function backOut(t) {
 
 /* ── Component ───────────────────────────────────────────────────── */
 export default function WorldMap({ marqueurs = [] }) {
-  const projectsData  = useContent('projects')
   const canvasRef     = useRef(null)
   const wrapperRef    = useRef(null)
   const dotsRef       = useRef([])
@@ -51,29 +34,14 @@ export default function WorldMap({ marqueurs = [] }) {
   const allRevRef     = useRef(false)
   const boxesRef      = useRef([])
 
-  /* Build city list: office markers + dynamic project markers */
+  /* Build city list: office markers only */
   const buildCities = useCallback((projection) => {
-    const officeCities = marqueurs.map(m => {
+    return marqueurs.map(m => {
       const [cx, cy] = projection([m.lng, m.lat])
       return { name: m.label || 'CMC Office', x: cx, y: cy, ox: m.ox ?? 12, oy: m.oy ?? -18,
                pulse: Math.random(), labelZoom: 1, scale: 0, revealDelay: 0, isOffice: true }
     })
-
-    const seen = new Set()
-    const projectCities = (projectsData?.projets || []).reduce((acc, p) => {
-      const { lieu, titre } = splitNom(p.nom)
-      if (!lieu || !COUNTRY_LATLNG[lieu] || seen.has(lieu)) return acc
-      seen.add(lieu)
-      const coords = COUNTRY_LATLNG[lieu]
-      const [cx, cy] = projection([coords.lng, coords.lat])
-      acc.push({ name: lieu, x: cx, y: cy, ox: coords.ox, oy: coords.oy,
-                 pulse: Math.random(), labelZoom: 1, scale: 0, revealDelay: 0,
-                 isOffice: false, project: titre })
-      return acc
-    }, [])
-
-    return [...officeCities, ...projectCities]
-  }, [marqueurs, projectsData])
+  }, [marqueurs])
 
   const topoCache = useRef(null)
 
@@ -244,13 +212,13 @@ export default function WorldMap({ marqueurs = [] }) {
       /* Label box */
       if (ctx.roundRect) {
         ctx.beginPath(); ctx.roundRect(bx, by, bw, bh, 3)
-        ctx.fillStyle = isHov ? `rgba(${orangeRgb},0.15)` : 'rgba(10,18,28,0.85)'; ctx.fill()
+        ctx.fillStyle = isHov ? orange : 'rgba(10,18,28,0.85)'; ctx.fill()
         ctx.beginPath(); ctx.roundRect(bx, by, bw, bh, 3)
         ctx.strokeStyle = isHov ? orange : 'rgba(255,255,255,0.18)'
         ctx.lineWidth = isHov ? 1.2 : 0.7; ctx.stroke()
       }
       ctx.textAlign = 'center'; ctx.textBaseline = 'middle'
-      ctx.fillStyle = isHov ? orange : 'rgba(255,255,255,0.88)'
+      ctx.fillStyle = isHov ? '#ffffff' : 'rgba(255,255,255,0.88)'
       ctx.fillText(text, lx, ly)
       ctx.textBaseline = 'alphabetic'; ctx.globalAlpha = 1
 

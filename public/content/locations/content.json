@@ -9,9 +9,33 @@
   ],
   "bouton": { "label": "View our locations", "ancre": "#implantations" },
   "marqueurs": [
-    { "lat": 46, "lng": 2,  "label": "France", "ox": -14, "oy": -20 },
-    { "lat": 24, "lng": 54, "label": "UAE",    "ox":  14, "oy": -20 }
+    { "lat":  59.41, "lng":   5.27, "label": "Haugesund",      "ox":  42, "oy": -26 },
+    { "lat":  43.30, "lng":   5.37, "label": "Marseille",      "ox": -52, "oy": -26 },
+    { "lat":  41.01, "lng":  28.97, "label": "Istanbul",       "ox":  42, "oy": -26 },
+    { "lat":  25.29, "lng":  51.53, "label": "Doha",           "ox":  -8, "oy": -34 },
+    { "lat":  25.20, "lng":  55.27, "label": "Dubai",          "ox":  42, "oy": -26 },
+    { "lat":   6.52, "lng":   3.38, "label": "Lagos",          "ox": -46, "oy": -26 },
+    { "lat": -22.91, "lng": -43.17, "label": "Rio de Janeiro", "ox": -64, "oy": -26 },
+    { "lat":   3.14, "lng": 101.69, "label": "Kuala Lumpur",   "ox": -60, "oy": -26 },
+    { "lat":   1.35, "lng": 103.82, "label": "Singapore",      "ox":  42, "oy": -26 },
+    { "lat":  31.23, "lng": 121.47, "label": "Shanghai",       "ox":  42, "oy": -26 }
   ],
+  "partenaires": {
+    "label": "Our trusted partners",
+    "logos": [
+      "PAGE 5 - LOGO/1 - LOGO BRAZIL.jpg",
+      "PAGE 5 - LOGO/2 - LOGO ISTANBUL.jpg",
+      "PAGE 5 - LOGO/3 - LOGO ALAM.jpg",
+      "PAGE 5 - LOGO/3 - LOGO NATO.jpg",
+      "PAGE 5 - LOGO/4 - LOGO MEDS.jpg",
+      "PAGE 5 - LOGO/5 - LOGO FRANCE.jpg",
+      "PAGE 5 - LOGO/6 - LOGO MOHN.jpg",
+      "PAGE 5 - LOGO/7 - LOGO ODEBRECHT.jpg",
+      "PAGE 5 - LOGO/8 - LOGO DNV.jpg",
+      "PAGE 5 - LOGO/9 - LOGO BV.jpg",
+      "PAGE 5 - LOGO/9 - LOGO LR.jpg"
+    ]
+  },
   "i18n": {
     "zh": {
       "eyebrow": "地点与项目",
@@ -22,7 +46,8 @@
         { "label": "个项目" },
         { "label": "年经验" }
       ],
-      "bouton": { "label": "查看我们的布局" }
+      "bouton": { "label": "查看我们的布局" },
+      "partenaires": { "label": "我们值得信赖的合作伙伴" }
     },
     "tr": {
       "eyebrow": "Lokasyonlar & Projeler",
@@ -33,7 +58,8 @@
         { "label": "Proje" },
         { "label": "Yıllık Deneyim" }
       ],
-      "bouton": { "label": "Lokasyonlarımızı Görüntüle" }
+      "bouton": { "label": "Lokasyonlarımızı Görüntüle" },
+      "partenaires": { "label": "Güvenilir ortaklarımız" }
     }
   }
 }
