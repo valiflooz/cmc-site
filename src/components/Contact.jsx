@@ -2,20 +2,34 @@ import { useState } from 'react'
 import { MapPin, ArrowRight, CheckCircle, AlertCircle, User } from 'lucide-react'
 import { useContent, mediaUrl } from '../content.jsx'
 
-/* ─── Remplace par ton ID Formspree ──────────────────────────────────────────
-   1. Va sur https://formspree.io et crée un compte avec eric.guillermet@subseatec.com
-   2. Crée un nouveau formulaire (« New Form »)
-   3. Copie l'ID (ex : xabc1234) et remplace VOTRE_ID_FORMSPREE ci-dessous       */
 const FORMSPREE_ID = 'xojbkjna'
 
 export default function Contact() {
   const c = useContent('contact')
   const [status, setStatus] = useState('idle') // idle | sending | success | error
+  const [errors, setErrors] = useState({})
+
+  const clearError = (field) => {
+    if (errors[field]) setErrors(prev => ({ ...prev, [field]: false }))
+  }
 
   const onSubmit = async (e) => {
     e.preventDefault()
-    setStatus('sending')
     const data = new FormData(e.target)
+
+    // Validation des champs obligatoires
+    const newErrors = {}
+    if (!data.get('name')?.trim())    newErrors.name    = true
+    if (!data.get('email')?.trim())   newErrors.email   = true
+    if (!data.get('message')?.trim()) newErrors.message = true
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors)
+      return
+    }
+
+    setErrors({})
+    setStatus('sending')
     try {
       const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
         method: 'POST',
@@ -60,7 +74,7 @@ export default function Contact() {
           </div>
 
           <form className="contact-form" onSubmit={onSubmit} noValidate>
-            {/* Honeypot anti-spam — invisible pour les humains, rempli par les bots */}
+            {/* Honeypot anti-spam */}
             <input
               type="text"
               name="_gotcha"
@@ -70,11 +84,36 @@ export default function Contact() {
               aria-hidden="true"
             />
 
-            <input type="text"  name="name"    placeholder={c.formulaire.nom}      required />
-            <input type="text"  name="company" placeholder={c.formulaire.societe} />
-            <input type="email" name="email"   placeholder={c.formulaire.email}   required />
-            <input type="tel"   name="phone"   placeholder={c.formulaire.telephone} />
-            <textarea name="message" className="full" placeholder={c.formulaire.message} required />
+            <input
+              type="text"
+              name="name"
+              placeholder={c.formulaire.nom}
+              className={errors.name ? 'field-error' : ''}
+              onChange={() => clearError('name')}
+            />
+            <input
+              type="text"
+              name="company"
+              placeholder={c.formulaire.societe}
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder={c.formulaire.email}
+              className={errors.email ? 'field-error' : ''}
+              onChange={() => clearError('email')}
+            />
+            <input
+              type="tel"
+              name="phone"
+              placeholder={c.formulaire.telephone}
+            />
+            <textarea
+              name="message"
+              className={`full${errors.message ? ' field-error' : ''}`}
+              placeholder={c.formulaire.message}
+              onChange={() => clearError('message')}
+            />
 
             {status === 'success' && (
               <div className="form-feedback form-feedback--ok">
