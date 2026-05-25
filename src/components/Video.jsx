@@ -1,20 +1,67 @@
-import { useState, useRef } from 'react'
-import { Play, X, ArrowRight } from 'lucide-react'
+import { useState, useRef, useEffect } from 'react'
+import { Play, X, ArrowRight, Maximize2, Minimize2, Volume2, VolumeX } from 'lucide-react'
 import { useContent, mediaUrl } from '../content.jsx'
 import SectionTitle from './SectionTitle.jsx'
+import VideoModal from './VideoModal.jsx'
+
+// Encode each path segment so spaces (e.g. "Norway 1.jpg") work in CSS url()
+const encodeVideoPath = (file) =>
+  file.split('/').map(encodeURIComponent).join('/')
 
 export default function Video() {
   const c = useContent('video')
   const projets = c.projets || []
 
-  const [projIdx, setProjIdx]   = useState(0)
-  const [vidIdx, setVidIdx]     = useState(0)
-  const [playing, setPlaying]   = useState(false)
-  const videoRef = useRef(null)
+  const [showModal, setShowModal]   = useState(false)
+  const [projIdx, setProjIdx]       = useState(0)
+  const [vidIdx, setVidIdx]         = useState(0)
+  const [playing, setPlaying]       = useState(false)
+  const [isMuted, setIsMuted]       = useState(true)
+  const [isFullscreen, setIsFullscreen] = useState(false)
+  const videoRef  = useRef(null)
+  const visualRef = useRef(null)
+
+  // Écoute les changements d'état plein écran (tous navigateurs)
+  useEffect(() => {
+    const handler = () => setIsFullscreen(!!document.fullscreenElement)
+    document.addEventListener('fullscreenchange',       handler)
+    document.addEventListener('webkitfullscreenchange', handler)
+    document.addEventListener('mozfullscreenchange',    handler)
+    document.addEventListener('msfullscreenchange',     handler)
+    return () => {
+      document.removeEventListener('fullscreenchange',       handler)
+      document.removeEventListener('webkitfullscreenchange', handler)
+      document.removeEventListener('mozfullscreenchange',    handler)
+      document.removeEventListener('msfullscreenchange',     handler)
+    }
+  }, [])
 
   const projet     = projets[projIdx]
   const video      = projet?.videos?.[vidIdx]
   const description = projet?.description ?? ''
+
+  const toggleFullscreen = () => {
+    if (!document.fullscreenElement) {
+      // On passe le conteneur (pas <video>) pour que les boutons restent visibles
+      const el = visualRef.current
+      if (!el) return
+      if (el.requestFullscreen)            el.requestFullscreen()
+      else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen()
+      else if (el.mozRequestFullScreen)    el.mozRequestFullScreen()
+      else if (el.msRequestFullscreen)     el.msRequestFullscreen()
+    } else {
+      if (document.exitFullscreen)             document.exitFullscreen()
+      else if (document.webkitExitFullscreen)  document.webkitExitFullscreen()
+      else if (document.mozCancelFullScreen)   document.mozCancelFullScreen()
+      else if (document.msExitFullscreen)      document.msExitFullscreen()
+    }
+  }
+
+  const toggleMute = () => {
+    const next = !isMuted
+    setIsMuted(next)
+    if (videoRef.current) videoRef.current.muted = next
+  }
 
   const doPlay = () => {
     setPlaying(true)
@@ -26,6 +73,12 @@ export default function Video() {
     if (videoRef.current) {
       videoRef.current.pause()
       videoRef.current.currentTime = 0
+    }
+    if (document.fullscreenElement) {
+      if (document.exitFullscreen)            document.exitFullscreen()
+      else if (document.webkitExitFullscreen) document.webkitExitFullscreen()
+      else if (document.mozCancelFullScreen)  document.mozCancelFullScreen()
+      else if (document.msExitFullscreen)     document.msExitFullscreen()
     }
   }
 
@@ -56,21 +109,23 @@ export default function Video() {
   if (!projet || !video) return null
 
   return (
+    <>
     <section className="video-section" id="video">
 
       {/* ── Colonne gauche : visuel ──────────────────────── */}
-      <div className="video-visual">
+      <div className="video-visual" ref={visualRef}>
 
         <video
           key={video.fichier}
           ref={videoRef}
           className="video-player"
-          poster={mediaUrl('video', video.poster)}
+          poster={mediaUrl('video', encodeVideoPath(video.poster))}
           onEnded={handleEnded}
           onCanPlay={handleCanPlay}
           playsInline
+          muted={isMuted}
         >
-          <source src={mediaUrl('video', video.fichier)} type="video/mp4" />
+          <source src={mediaUrl('video', encodeVideoPath(video.fichier))} type="video/mp4" />
         </video>
 
         {/* Overlay sombre + fondu (masqué quand en lecture) */}
@@ -83,11 +138,31 @@ export default function Video() {
           </button>
         )}
 
-        {/* Bouton Stop */}
-        {playing && (
+        {/* Bouton Stop — visible en lecture OU en plein écran */}
+        {(playing || isFullscreen) && (
           <button className="video-stop-btn" onClick={doStop} aria-label="Stop">
             <X size={20} />
           </button>
+        )}
+
+        {/* Contrôles : son + plein écran — visibles uniquement en lecture */}
+        {playing && (
+          <div className="video-controls">
+            <button
+              className="video-ctrl-btn"
+              onClick={toggleMute}
+              aria-label={isMuted ? 'Activer le son' : 'Couper le son'}
+            >
+              {isMuted ? <VolumeX size={16} /> : <Volume2 size={16} />}
+            </button>
+            <button
+              className="video-ctrl-btn"
+              onClick={toggleFullscreen}
+              aria-label={isFullscreen ? 'Quitter le plein écran' : 'Plein écran'}
+            >
+              {isFullscreen ? <Minimize2 size={16} /> : <Maximize2 size={16} />}
+            </button>
+          </div>
         )}
 
         {/* Sélecteur multi-vidéos (Norway) — visible en lecture */}
@@ -98,7 +173,7 @@ export default function Video() {
                 key={i}
                 className={`video-multi-thumb${i === vidIdx ? ' active' : ''}`}
                 onClick={() => switchVideo(i)}
-                style={{ backgroundImage: `url(${mediaUrl('video', v.poster)})` }}
+                style={{ backgroundImage: `url(${mediaUrl('video', encodeVideoPath(v.poster))})` }}
                 aria-label={`Clip ${i + 1}`}
               />
             ))}
@@ -127,10 +202,10 @@ export default function Video() {
           <p className="eyebrow">{c.eyebrow}</p>
           <SectionTitle titre={c.titre} />
           <p>{c.paragraphe}</p>
-          <a href={c.bouton.ancre} className="btn btn-outline">
+          <button className="btn btn-outline" onClick={() => setShowModal(true)}>
             {c.bouton.label}
             <span className="btn-arrow"><ArrowRight size={16} /></span>
-          </a>
+          </button>
         </div>
 
         {/* Panneau description projet */}
@@ -141,5 +216,10 @@ export default function Video() {
 
       </div>
     </section>
+
+    {showModal && (
+      <VideoModal projets={projets} onClose={() => setShowModal(false)} />
+    )}
+    </>
   )
 }

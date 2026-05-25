@@ -6,7 +6,7 @@
   "certifications": [
     { "label": "DNV-GL", "detail": "Certified & Classified" },
     { "label": "LR",     "detail": "Rules" },
-    { "label": "BV",     "detail": "Rules" }
+    { "label": "BV",     "detail": "Rules,  Certified & Classified" }
   ],
   "video": { "dossierFrames": "frames", "nombreFrames": 121 },
   "i18n": {
