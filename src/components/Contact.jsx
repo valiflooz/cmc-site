@@ -6,7 +6,7 @@ import { useContent, mediaUrl } from '../content.jsx'
    1. Va sur https://formspree.io et crée un compte avec eric.guillermet@subseatec.com
    2. Crée un nouveau formulaire (« New Form »)
    3. Copie l'ID (ex : xabc1234) et remplace VOTRE_ID_FORMSPREE ci-dessous       */
-const FORMSPREE_ID = 'VOTRE_ID_FORMSPREE'
+const FORMSPREE_ID = 'xojbkjna'
 
 export default function Contact() {
   const c = useContent('contact')
