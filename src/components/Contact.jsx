@@ -33,6 +33,16 @@ export default function Contact() {
 
     setErrors({})
     setStatus('sending')
+
+    // Si le honeypot est rempli (autofill navigateur), on simule un succès sans envoyer
+    if (data.get('_gotcha')) {
+      setStatus('success')
+      e.target.reset()
+      return
+    }
+    // On retire le honeypot du payload pour éviter tout faux positif
+    data.delete('_gotcha')
+
     try {
       const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
         method: 'POST',
@@ -46,7 +56,10 @@ export default function Contact() {
       } else {
         console.error('Formspree error', res.status, json)
         setStatus('error')
-        setErrorDetail(json?.errors?.map(e => e.message).join(' ') || `HTTP ${res.status}`)
+        const msg = json?.errors?.map(e => e.message).join(' ')
+                 || json?.error
+                 || `HTTP ${res.status}`
+        setErrorDetail(msg)
       }
     } catch (err) {
       console.error('Formspree fetch failed', err)
