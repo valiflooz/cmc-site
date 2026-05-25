@@ -3,19 +3,63 @@
   "titre": { "ligne1": "Our projects", "ligne2": "", "accent": "in action" },
   "paragraphe": "Discover our expertise, our teams and our achievements around the world.",
   "bouton": { "label": "Watch the video", "ancre": "#video" },
-  "poster": "poster.jpg",
+  "projets": [
+    {
+      "nom": "Brazil",
+      "description": "Offshore operations conducted in Brazil, including hyperbaric diving systems and subsea intervention equipment manufactured and commissioned by CMC SUBSEATEC teams on-site.",
+      "videos": [
+        { "fichier": "1 - BRAZIL/RIO.mp4", "poster": "1 - BRAZIL/poster.jpg" }
+      ]
+    },
+    {
+      "nom": "Norway & Argentina",
+      "description": "Multi-phase offshore campaigns across Norway and Argentina, covering survey operations, equipment deployment and maintenance in demanding North Sea and Atlantic conditions.",
+      "videos": [
+        { "fichier": "2 - NORWAY - ARGENTINA/Norway 1.mp4", "poster": "2 - NORWAY - ARGENTINA/Norway 1.jpg" },
+        { "fichier": "2 - NORWAY - ARGENTINA/Norway 2.mp4", "poster": "2 - NORWAY - ARGENTINA/Norway 2.jpg" },
+        { "fichier": "2 - NORWAY - ARGENTINA/Norway 3.mp4", "poster": "2 - NORWAY - ARGENTINA/Norway 3.jpg" },
+        { "fichier": "2 - NORWAY - ARGENTINA/Norway 4.mp4", "poster": "2 - NORWAY - ARGENTINA/Norway 4.jpg" }
+      ]
+    },
+    {
+      "nom": "Türkiye",
+      "description": "Naval and offshore engineering project in Turkey, featuring the design, manufacturing and commissioning of specialised underwater intervention systems for the Turkish Navy.",
+      "videos": [
+        { "fichier": "3 - TURKIYE/Turkiye.mp4", "poster": "3 - TURKIYE/poster.jpg" }
+      ]
+    },
+    {
+      "nom": "Subsea Discovering",
+      "description": "Deep-sea exploration and discovery missions showcasing CMC SUBSEATEC's advanced subsea technology, ROV integration and underwater survey capabilities in extreme environments.",
+      "videos": [
+        { "fichier": "4 - SUBSEA DISCOVERING/SUBSEA.mp4", "poster": "4 - SUBSEA DISCOVERING/poster.jpg" }
+      ]
+    }
+  ],
   "i18n": {
     "zh": {
       "eyebrow": "视频",
       "titre": { "ligne1": "我们的项目", "accent": "实况" },
       "paragraphe": "探索我们的专业技术、团队及全球项目成就。",
-      "bouton": { "label": "观看视频" }
+      "bouton": { "label": "观看视频" },
+      "projets": [
+        { "description": "在巴西开展的海上作业，包括由CMC SUBSEATEC团队现场制造和调试的高压潜水系统及水下干预设备。" },
+        { "description": "挪威与阿根廷的多阶段海上项目，涵盖北海与大西洋恶劣条件下的勘测作业、设备部署与维护工作。" },
+        { "description": "土耳其海军及海洋工程项目，专为土耳其海军设计、制造并调试特种水下干预系统。" },
+        { "description": "深海探索与发现任务，展示CMC SUBSEATEC先进的水下技术、ROV集成及极端环境下的水下勘测能力。" }
+      ]
     },
     "tr": {
       "eyebrow": "Video",
       "titre": { "ligne1": "Projelerimiz", "accent": "uygulamada" },
       "paragraphe": "Uzmanlığımızı, ekiplerimizi ve dünya genelindeki başarılarımızı keşfedin.",
-      "bouton": { "label": "Videoyu İzle" }
+      "bouton": { "label": "Videoyu İzle" },
+      "projets": [
+        { "description": "Brezilya'da gerçekleştirilen açık deniz operasyonları; CMC SUBSEATEC ekiplerinin yerinde imalat ve devreye aldığı hiperbarik dalış sistemleri ve denizaltı müdahale ekipmanlarını kapsamaktadır." },
+        { "description": "Norveç ve Arjantin'de çok aşamalı açık deniz kampanyaları; zorlu Kuzey Denizi ve Atlantik koşullarında sörvey operasyonları, ekipman konuşlandırma ve bakım çalışmaları." },
+        { "description": "Türkiye'deki deniz ve açık deniz mühendisliği projesi; Türk Deniz Kuvvetleri için özel sualtı müdahale sistemlerinin tasarımı, imalatı ve devreye alınması." },
+        { "description": "Derin deniz keşif ve araştırma görevleri; CMC SUBSEATEC'in gelişmiş sualtı teknolojisi, ROV entegrasyonu ve aşırı ortamlardaki sualtı sörvey kapasitesini sergiliyor." }
+      ]
     }
   }
 }
