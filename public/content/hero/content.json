@@ -5,7 +5,7 @@
     { "texte": "Commissioning",  "accent": true  }
   ],
   "sousTitre": "Systems engineered for maritime missions.",
-  "bouton": { "label": "Discover our expertise", "ancre": "#apropos" },
+  "bouton": { "label": "Discover our projects", "ancre": "#projects" },
   "fond": "background.jpg",
   "i18n": {
     "zh": {
@@ -15,7 +15,7 @@
         { "texte": "调试交付" }
       ],
       "sousTitre": "专为海洋任务而设计的工程系统。",
-      "bouton": { "label": "探索我们的专业能力" }
+      "bouton": { "label": "探索我们的项目" }
     },
     "tr": {
       "titreLignes": [
@@ -24,7 +24,7 @@
         { "texte": "Devreye Alma" }
       ],
       "sousTitre": "Denizcilik görevleri için tasarlanmış mühendislik sistemleri.",
-      "bouton": { "label": "Uzmanlığımızı Keşfedin" }
+      "bouton": { "label": "Projelerimizi Keşfedin" }
     }
   }
 }

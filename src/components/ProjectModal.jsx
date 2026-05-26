@@ -139,6 +139,19 @@ export default function ProjectModal({ project, onClose }) {
             {project.description && (
               <aside className="modal-description">
                 <p>{project.description}</p>
+                {project.partenaire && (
+                  <p className="modal-partenaire">
+                    {project.partenaire.label}{' '}
+                    <a
+                      href={`https://${project.partenaire.url}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="modal-partenaire-link"
+                    >
+                      {project.partenaire.url}
+                    </a>
+                  </p>
+                )}
               </aside>
             )}
           </div>

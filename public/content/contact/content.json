@@ -21,7 +21,7 @@
     "zh": {
       "eyebrow": "联系我们",
       "titre": { "avant": "开启", "accent": "项目" },
-      "paragraphe": "告诉我们您正在构建什么。我们的团队随时准备倾听。请联系我们，共同探讨您的需求。",
+      "paragraphe": "告诉我们您正在建造什么。我们的团队随时准备倾听。请联系我们，共同探讨您的需求。",
       "boutonFormulaire": "发送信息",
       "formulaire": {
         "nom": "姓名",
@@ -44,7 +44,7 @@
         "telephone": "Telefon",
         "message": "Mesajınız"
       },
-      "ceo": { "fonction": "İcra Kurulu Başkanı" }
+      "ceo": { "fonction": "Genel Müdür" }
     }
   }
 }

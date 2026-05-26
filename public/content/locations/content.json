@@ -7,7 +7,7 @@
     { "nombre": "50+", "label": "Projects" },
     { "nombre": "40+", "label": "Years of experience" }
   ],
-  "bouton": { "label": "View our locations", "ancre": "#implantations" },
+  "bouton": { "label": "View our locations", "ancre": "#locations" },
   "marqueurs": [
     { "lat":  59.41, "lng":   5.27, "label": "Haugesund",      "ox":  42, "oy": -26 },
     { "lat":  43.30, "lng":   5.37, "label": "Marseille",      "ox": -52, "oy": -26 },
@@ -50,7 +50,7 @@
       "partenaires": { "label": "我们值得信赖的合作伙伴" }
     },
     "tr": {
-      "eyebrow": "Lokasyonlar & Projeler",
+      "eyebrow": "Konumlar & Projeler",
       "titre": { "ligne1": "Görev neredeyse,", "ligne2": "", "accent": "biz oradayız." },
       "paragraphe": "CMC SUBSEATEC, zorlu açık deniz projeleri için her kıtada faaliyet göstermektedir. Küresel varlığımız hız, yakınlık ve performansı güvence altına alır.",
       "stats": [
@@ -58,7 +58,7 @@
         { "label": "Proje" },
         { "label": "Yıllık Deneyim" }
       ],
-      "bouton": { "label": "Lokasyonlarımızı Görüntüle" },
+      "bouton": { "label": "Konumlarımızı Görüntüle" },
       "partenaires": { "label": "Güvenilir ortaklarımız" }
     }
   }

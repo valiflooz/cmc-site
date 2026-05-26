@@ -44,7 +44,7 @@ export default function Projects() {
   const go = (i) => setIndex(Math.min(maxIndex, Math.max(0, i)))
 
   return (
-    <section className="projects" id="realisations">
+    <section className="projects" id="projects">
       <div className="container">
         <div className="projects-head">
           <div>

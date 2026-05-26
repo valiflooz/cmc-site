@@ -134,7 +134,7 @@ export default function About() {
   }, [nombreFrames, dossierFrames])
 
   return (
-    <section ref={sectionRef} className="about" id="apropos">
+    <section ref={sectionRef} className="about" id="about">
       <div className="about-grid">
         <div ref={imageRef} className="about-image">
           <canvas ref={canvasRef} className="about-canvas" />

@@ -10,7 +10,7 @@ export default function Locations() {
   const logos = c.partenaires?.logos ?? []
 
   return (
-    <section className="locations" id="implantations">
+    <section className="locations" id="locations">
       <div className="container">
 
         <div className="locations-grid">

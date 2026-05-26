@@ -39,7 +39,7 @@
   "i18n": {
     "zh": {
       "eyebrow": "视频",
-      "titre": { "ligne1": "我们的项目", "accent": "实况" },
+      "titre": { "ligne1": "我们的项目", "accent": "行动中" },
       "paragraphe": "探索我们的专业技术、团队及全球项目成就。",
       "bouton": { "label": "观看所有视频" },
       "projets": [
@@ -51,7 +51,7 @@
     },
     "tr": {
       "eyebrow": "Video",
-      "titre": { "ligne1": "Projelerimiz", "accent": "uygulamada" },
+      "titre": { "ligne1": "Projelerimiz", "accent": "sahadaki" },
       "paragraphe": "Uzmanlığımızı, ekiplerimizi ve dünya genelindeki başarılarımızı keşfedin.",
       "bouton": { "label": "Tüm videoları izle" },
       "projets": [

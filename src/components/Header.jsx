@@ -55,6 +55,9 @@ export default function Header() {
         }
       })
       setActiveIdx(active)
+      // Nettoyer l'URL quand on est sur le hero, sinon refléter la section active
+      const ancre = active >= 0 ? liensRef.current[active].ancre : window.location.pathname
+      history.replaceState(null, '', ancre)
     }
     fn()
     window.addEventListener('scroll', fn, { passive: true })
