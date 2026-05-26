@@ -2,19 +2,31 @@ import { ArrowRight } from 'lucide-react'
 import { useContent, mediaUrl } from '../content.jsx'
 
 const WORD_STEP = 0.12
-const HERO_GRADIENT =
-  'linear-gradient(90deg, rgba(11,22,32,0.96) 0%, rgba(11,22,32,0.78) 38%, rgba(11,22,32,0.35) 72%, rgba(11,22,32,0.55) 100%)'
 
 export default function Hero() {
   const c = useContent('hero')
   let wi = 0
 
+  // Derive WebP path from JPEG filename (background.jpg → background.webp)
+  const jpegUrl = mediaUrl('hero', c.fond)
+  const webpUrl = jpegUrl.replace(/\.(jpg|jpeg|png)$/i, '.webp')
+
   return (
-    <section
-      className="hero"
-      id="top"
-      style={{ backgroundImage: `${HERO_GRADIENT}, url(${mediaUrl('hero', c.fond)})` }}
-    >
+    <section className="hero" id="top">
+
+      {/* ── Background image — <picture> pour WebP + fetchpriority high ── */}
+      <picture className="hero-bg" aria-hidden="true">
+        <source srcSet={webpUrl} type="image/webp" />
+        <img
+          src={jpegUrl}
+          alt=""
+          fetchPriority="high"
+          decoding="async"
+          className="hero-bg-img"
+        />
+      </picture>
+      {/* Gradient overlay */}
+      <div className="hero-bg-gradient" aria-hidden="true" />
       <div className="hero-content">
         <h1>
           {c.titreLignes.map((ligne, li) => {

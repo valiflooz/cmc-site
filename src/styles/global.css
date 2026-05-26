@@ -234,10 +234,31 @@ ul { list-style: none; }
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-color: var(--navy-900);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: var(--navy-900); /* couleur immédiate en attendant l'image */
+}
+
+/* Image de fond — chargée en priorité via <picture fetchpriority="high"> */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+/* Gradient overlay (remplace l'ancien backgroundImage composite) */
+.hero-bg-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg,
+    rgba(11,22,32,0.96) 0%,
+    rgba(11,22,32,0.78) 38%,
+    rgba(11,22,32,0.35) 72%,
+    rgba(11,22,32,0.55) 100%
+  );
 }
 .hero-content {
   max-width: 840px;
