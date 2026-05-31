@@ -6,7 +6,7 @@
   "certifications": [
     { "label": "DNV-GL", "detail": "Certified & Classified" },
     { "label": "LR",     "detail": "Rules" },
-    { "label": "BV",     "detail": "Rules,  Certified & Classified" }
+    { "label": "BV",     "detail": "Certified & Classified" }
   ],
   "video": { "dossierFrames": "frames", "nombreFrames": 121 },
   "i18n": {
@@ -18,7 +18,7 @@
       "certifications": [
         { "detail": "认证与分级" },
         { "detail": "规范认可" },
-        { "detail": "规范认可、认证与分级" }
+        { "detail": "认证与分级" }
       ]
     },
     "tr": {
@@ -29,7 +29,7 @@
       "certifications": [
         { "detail": "Sertifikalı ve Sınıflandırılmış" },
         { "detail": "Klas Kuralları" },
-        { "detail": "Klas Kuralları, Sertifikalı ve Sınıflandırılmış" }
+        { "detail": "Sertifikalı ve Sınıflandırılmış" }
       ]
     }
   }

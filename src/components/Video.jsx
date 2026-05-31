@@ -1,8 +1,9 @@
-import { useState, useRef, useEffect } from 'react'
-import { Play, X, ArrowRight, Maximize2, Minimize2, Volume2, VolumeX } from 'lucide-react'
+import { useState, useRef, useEffect, useCallback } from 'react'
+import { Play, X, ArrowRight } from 'lucide-react'
 import { useContent, mediaUrl } from '../content.jsx'
 import SectionTitle from './SectionTitle.jsx'
 import VideoModal from './VideoModal.jsx'
+import VideoControlBar from './VideoControlBar.jsx'
 
 // Encode each path segment so spaces (e.g. "Norway 1.jpg") work in CSS url()
 const encodeVideoPath = (file) =>
@@ -12,14 +13,33 @@ export default function Video() {
   const c = useContent('video')
   const projets = c.projets || []
 
-  const [showModal, setShowModal]   = useState(false)
-  const [projIdx, setProjIdx]       = useState(0)
-  const [vidIdx, setVidIdx]         = useState(0)
-  const [playing, setPlaying]       = useState(false)
-  const [isMuted, setIsMuted]       = useState(true)
-  const [isFullscreen, setIsFullscreen] = useState(false)
-  const videoRef  = useRef(null)
-  const visualRef = useRef(null)
+  const [showModal,     setShowModal]     = useState(false)
+  const [projIdx,       setProjIdx]       = useState(0)
+  const [vidIdx,        setVidIdx]        = useState(0)
+  const [playing,       setPlaying]       = useState(false)
+  const [isMuted,       setIsMuted]       = useState(true)
+  const [isFullscreen,  setIsFullscreen]  = useState(false)
+  const [barVisible,    setBarVisible]    = useState(false)
+  const videoRef   = useRef(null)
+  const visualRef  = useRef(null)
+  const idleTimer  = useRef(null)
+
+  // Affiche la barre et planifie sa disparition après 3 s (en lecture)
+  const showBar = useCallback((isPlaying) => {
+    setBarVisible(true)
+    clearTimeout(idleTimer.current)
+    if (isPlaying) {
+      idleTimer.current = setTimeout(() => setBarVisible(false), 3000)
+    }
+  }, [])
+
+  // Toujours visible quand la vidéo est arrêtée ; disparaît quand elle joue et souris inactive
+  useEffect(() => {
+    if (!playing) {
+      clearTimeout(idleTimer.current)
+      setBarVisible(false)   // barre cachée quand arrêtée (le bouton Play suffit)
+    }
+  }, [playing])
 
   // Écoute les changements d'état plein écran (tous navigateurs)
   useEffect(() => {
@@ -62,6 +82,8 @@ export default function Video() {
     setIsMuted(next)
     if (videoRef.current) videoRef.current.muted = next
   }
+
+  const handleMouseMove = () => { if (playing) showBar(true) }
 
   const doPlay = () => {
     setPlaying(true)
@@ -113,7 +135,7 @@ export default function Video() {
     <section className="video-section" id="video">
 
       {/* ── Colonne gauche : visuel ──────────────────────── */}
-      <div className="video-visual" ref={visualRef}>
+      <div className="video-visual" ref={visualRef} onMouseMove={handleMouseMove}>
 
         <video
           key={video.fichier}
@@ -145,24 +167,17 @@ export default function Video() {
           </button>
         )}
 
-        {/* Contrôles : son + plein écran — visibles uniquement en lecture */}
+        {/* Barre de navigation — visible au mouvement de souris en lecture */}
         {playing && (
-          <div className="video-controls">
-            <button
-              className="video-ctrl-btn"
-              onClick={toggleMute}
-              aria-label={isMuted ? 'Activer le son' : 'Couper le son'}
-            >
-              {isMuted ? <VolumeX size={16} /> : <Volume2 size={16} />}
-            </button>
-            <button
-              className="video-ctrl-btn"
-              onClick={toggleFullscreen}
-              aria-label={isFullscreen ? 'Quitter le plein écran' : 'Plein écran'}
-            >
-              {isFullscreen ? <Minimize2 size={16} /> : <Maximize2 size={16} />}
-            </button>
-          </div>
+          <VideoControlBar
+            videoRef={videoRef}
+            videoKey={video.fichier}
+            visible={barVisible}
+            isMuted={isMuted}
+            onToggleMute={toggleMute}
+            isFullscreen={isFullscreen}
+            onToggleFullscreen={toggleFullscreen}
+          />
         )}
 
         {/* Sélecteur multi-vidéos (Norway) — visible en lecture */}

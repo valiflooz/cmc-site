@@ -883,10 +883,93 @@ ul { list-style: none; }
 }
 .video-ctrl-btn:hover { background: rgba(255,255,255,0.25); color: #fff; }
 
+/* ── Barre de navigation vidéo ─────────────────────────── */
+.video-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 36px 14px 10px;
+  background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 100%);
+  z-index: 6;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
+}
+.video-bar.is-visible {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+
+/* Barre de progression */
+.video-bar-progress {
+  width: 100%;
+  height: 3px;
+  background: rgba(255,255,255,0.22);
+  border-radius: 2px;
+  cursor: pointer;
+  margin-bottom: 8px;
+  transition: height 0.15s;
+  position: relative;
+}
+.video-bar-progress:hover { height: 5px; }
+.video-bar-fill {
+  height: 100%;
+  background: var(--orange);
+  border-radius: 2px;
+  pointer-events: none;
+  transition: width 0.1s linear;
+}
+
+/* Ligne contrôles */
+.video-bar-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.video-bar-time {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.82);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+.video-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Boutons vitesse */
+.video-bar-speeds {
+  display: flex;
+  gap: 2px;
+  margin-right: 6px;
+}
+.video-bar-speed {
+  font-size: 10px;
+  font-weight: 700;
+  font-family: var(--font);
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: none;
+  color: rgba(255,255,255,0.55);
+  background: rgba(255,255,255,0.09);
+  cursor: pointer;
+  letter-spacing: 0.4px;
+  transition: background 0.15s, color 0.15s;
+}
+.video-bar-speed:hover { background: rgba(255,255,255,0.18); color: #fff; }
+.video-bar-speed.active { background: var(--orange); color: #fff; }
+
 /* ── Sélecteur multi-vidéos (Norway) ── */
 .video-multi {
   position: absolute;
-  bottom: 52px;
+  bottom: 96px;   /* au-dessus de la barre de navigation */
   left: 0; right: 0;
   z-index: 4;
   display: flex;

@@ -1,16 +1,41 @@
 import { useState, useRef, useEffect, useCallback } from 'react'
 import { X, Play, ChevronRight } from 'lucide-react'
 import { mediaUrl } from '../content.jsx'
+import VideoControlBar from './VideoControlBar.jsx'
 
 const encodeVideoPath = (file) =>
   file.split('/').map(encodeURIComponent).join('/')
 
 export default function VideoModal({ projets, onClose }) {
-  const [projIdx, setProjIdx] = useState(0)
-  const [vidIdx,  setVidIdx]  = useState(0)
-  const [playing, setPlaying] = useState(false)
-  const [closing, setClosing] = useState(false)
-  const videoRef = useRef(null)
+  const [projIdx,    setProjIdx]    = useState(0)
+  const [vidIdx,     setVidIdx]     = useState(0)
+  const [playing,    setPlaying]    = useState(false)
+  const [closing,    setClosing]    = useState(false)
+  const [isMuted,    setIsMuted]    = useState(true)
+  const [barVisible, setBarVisible] = useState(false)
+  const videoRef  = useRef(null)
+  const idleTimer = useRef(null)
+
+  const showBar = useCallback((isPlaying) => {
+    setBarVisible(true)
+    clearTimeout(idleTimer.current)
+    if (isPlaying) {
+      idleTimer.current = setTimeout(() => setBarVisible(false), 3000)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (!playing) {
+      clearTimeout(idleTimer.current)
+      setBarVisible(false)
+    }
+  }, [playing])
+
+  const toggleMute = () => {
+    const next = !isMuted
+    setIsMuted(next)
+    if (videoRef.current) videoRef.current.muted = next
+  }
 
   const projet = projets[projIdx]
   const video  = projet?.videos?.[vidIdx]
@@ -98,7 +123,10 @@ export default function VideoModal({ projets, onClose }) {
           <div className="video-modal-main">
 
             {/* Lecteur */}
-            <div className="video-modal-player-wrap">
+            <div
+              className="video-modal-player-wrap"
+              onMouseMove={() => { if (playing) showBar(true) }}
+            >
               <video
                 key={video.fichier}
                 ref={videoRef}
@@ -107,7 +135,7 @@ export default function VideoModal({ projets, onClose }) {
                 onEnded={handleEnded}
                 onCanPlay={handleCanPlay}
                 playsInline
-                muted
+                muted={isMuted}
               >
                 <source src={mediaUrl('video', encodeVideoPath(video.fichier))} type="video/mp4" />
               </video>
@@ -121,6 +149,17 @@ export default function VideoModal({ projets, onClose }) {
                 <button className="video-stop-btn" onClick={doStop} aria-label="Stop">
                   <X size={18} />
                 </button>
+              )}
+
+              {/* Barre de navigation */}
+              {playing && (
+                <VideoControlBar
+                  videoRef={videoRef}
+                  videoKey={video.fichier}
+                  visible={barVisible}
+                  isMuted={isMuted}
+                  onToggleMute={toggleMute}
+                />
               )}
             </div>
 

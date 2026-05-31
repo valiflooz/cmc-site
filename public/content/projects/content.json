@@ -1,7 +1,14 @@
 {
   "eyebrow": "Projects",
-  "titre": { "ligne1": "Advanced Capability", "ligne2": "", "accent": "achievements" },
-  "bouton": { "label": "View all projects", "ancre": "#projects" },
+  "titre": {
+    "ligne1": "Advanced Capability",
+    "ligne2": "",
+    "accent": "achievements"
+  },
+  "bouton": {
+    "label": "View all projects",
+    "ancre": "#projects"
+  },
   "projets": [
     {
       "nom": "International – Catamaran DSV offshore",
@@ -11,13 +18,15 @@
         {
           "nom": "Concept & Design",
           "photos": [
-            "1. Catamaran DSV offshore/Concept/titre.jpg",
             "1. Catamaran DSV offshore/Concept/CATA OFFSHORE 1.jpg",
             "1. Catamaran DSV offshore/Concept/CATA OFFSHORE 2.jpg",
             "1. Catamaran DSV offshore/Concept/CATA OFFSHORE 3.jpg",
             "1. Catamaran DSV offshore/Concept/CATA OFFSHORE 4.jpg",
             "1. Catamaran DSV offshore/Concept/CATA OFFSHORE 5.jpg",
-            "1. Catamaran DSV offshore/Concept/CATA OFFSHORE 6.jpg"
+            "1. Catamaran DSV offshore/Concept/CATA OFFSHORE 6.jpg",
+            "1. Catamaran DSV offshore/Concept/XCMC190 Supply_Ship_Axis_Section_RevA.jpg",
+            "1. Catamaran DSV offshore/Concept/XCMC190 Supply_upper_View_RevA.jpg",
+            "1. Catamaran DSV offshore/Concept/titre.jpg"
           ]
         }
       ]
@@ -38,6 +47,7 @@
         {
           "nom": "Manufacturing",
           "photos": [
+            "2. Brazil - Hyperbaric test chamber/Manufacturing/DSC01333.JPG",
             "2. Brazil - Hyperbaric test chamber/Manufacturing/DSC01348.JPG",
             "2. Brazil - Hyperbaric test chamber/Manufacturing/DSC01390.JPG",
             "2. Brazil - Hyperbaric test chamber/Manufacturing/DSC01442.JPG",
@@ -51,7 +61,6 @@
         {
           "nom": "Commissioning",
           "photos": [
-            "2. Brazil - Hyperbaric test chamber/Commissioning/titre.jpg",
             "2. Brazil - Hyperbaric test chamber/Commissioning/BRASIL.jpg",
             "2. Brazil - Hyperbaric test chamber/Commissioning/DSC01831.JPG",
             "2. Brazil - Hyperbaric test chamber/Commissioning/DSC01922.JPG",
@@ -59,7 +68,8 @@
             "2. Brazil - Hyperbaric test chamber/Commissioning/IMG_0865.JPG",
             "2. Brazil - Hyperbaric test chamber/Commissioning/IMG_0874.JPG",
             "2. Brazil - Hyperbaric test chamber/Commissioning/photo 1.JPG",
-            "2. Brazil - Hyperbaric test chamber/Commissioning/photo 2.JPG"
+            "2. Brazil - Hyperbaric test chamber/Commissioning/photo 2.JPG",
+            "2. Brazil - Hyperbaric test chamber/Commissioning/titre.jpg"
           ]
         }
       ]
@@ -78,14 +88,15 @@
         {
           "nom": "Manufacturing",
           "photos": [
-            "3. International - Offshore applications/Manufacturing/titre.jpg",
             "3. International - Offshore applications/Manufacturing/DSC01320 bis.JPG",
+            "3. International - Offshore applications/Manufacturing/DSC01625.JPG",
             "3. International - Offshore applications/Manufacturing/DSC02266.JPG",
             "3. International - Offshore applications/Manufacturing/DSC02419.JPG",
             "3. International - Offshore applications/Manufacturing/DSC02587.JPG",
             "3. International - Offshore applications/Manufacturing/DSC02846.JPG",
             "3. International - Offshore applications/Manufacturing/DSCI0027.JPG",
-            "3. International - Offshore applications/Manufacturing/TM02_Essais08.jpg"
+            "3. International - Offshore applications/Manufacturing/TM02_Essais08.jpg",
+            "3. International - Offshore applications/Manufacturing/titre.jpg"
           ]
         }
       ]
@@ -136,19 +147,21 @@
         {
           "nom": "Commissioning",
           "photos": [
-            "4. Norway - Diving system/Commissioning/titre.JPG",
             "4. Norway - Diving system/Commissioning/1637735082619.jpeg",
+            "4. Norway - Diving system/Commissioning/1656633895632.jpeg",
             "4. Norway - Diving system/Commissioning/1687919502868.jpeg",
             "4. Norway - Diving system/Commissioning/1696893782895.jpeg",
             "4. Norway - Diving system/Commissioning/IMG_3504.JPG",
             "4. Norway - Diving system/Commissioning/IMG_3554.JPG",
             "4. Norway - Diving system/Commissioning/IMG_3614.JPG",
             "4. Norway - Diving system/Commissioning/IMG_3831.JPG",
+            "4. Norway - Diving system/Commissioning/IMG_4277.JPG",
             "4. Norway - Diving system/Commissioning/IMG_4315.JPG",
             "4. Norway - Diving system/Commissioning/IMG_4434.JPG",
             "4. Norway - Diving system/Commissioning/IMG_4482.JPG",
             "4. Norway - Diving system/Commissioning/IMG_4493.JPG",
-            "4. Norway - Diving system/Commissioning/IMG_4494.JPG"
+            "4. Norway - Diving system/Commissioning/IMG_4494.JPG",
+            "4. Norway - Diving system/Commissioning/titre.JPG"
           ]
         }
       ]
@@ -177,6 +190,7 @@
             "5. Turkiye - Diving system/Manufacturing/IMG_2324.JPG",
             "5. Turkiye - Diving system/Manufacturing/IMG_2458.jpg",
             "5. Turkiye - Diving system/Manufacturing/IMG_2621.JPG",
+            "5. Turkiye - Diving system/Manufacturing/IMG_3149.JPG",
             "5. Turkiye - Diving system/Manufacturing/IMG_3163.JPG",
             "5. Turkiye - Diving system/Manufacturing/IMG_3168.JPG",
             "5. Turkiye - Diving system/Manufacturing/IMG_3169.JPG",
@@ -188,7 +202,6 @@
         {
           "nom": "Commissioning",
           "photos": [
-            "5. Turkiye - Diving system/Commissioning/titre.jpg",
             "5. Turkiye - Diving system/Commissioning/11564515.jpg",
             "5. Turkiye - Diving system/Commissioning/2018-EKIM-20181007_2_32739232_37876781.jpg",
             "5. Turkiye - Diving system/Commissioning/2018-EKIM-20181007_2_32739232_37876804.jpg",
@@ -209,11 +222,13 @@
             "5. Turkiye - Diving system/Commissioning/IMG_2977.JPG",
             "5. Turkiye - Diving system/Commissioning/IMG_3122.JPG",
             "5. Turkiye - Diving system/Commissioning/IMG_3218.JPG",
+            "5. Turkiye - Diving system/Commissioning/IMG_3309.JPG",
             "5. Turkiye - Diving system/Commissioning/MOSHIP.jpg",
             "5. Turkiye - Diving system/Commissioning/TUR 3.jpeg",
             "5. Turkiye - Diving system/Commissioning/TUR 4.jpeg",
             "5. Turkiye - Diving system/Commissioning/TUR 6.jpeg",
-            "5. Turkiye - Diving system/Commissioning/TUR 7.jpeg"
+            "5. Turkiye - Diving system/Commissioning/TUR 7.jpeg",
+            "5. Turkiye - Diving system/Commissioning/titre.jpg"
           ]
         }
       ]
@@ -226,15 +241,15 @@
         {
           "nom": "Concept",
           "photos": [
-            "6. International - Subsea discovering/titre.jpeg",
-            "6. International - Subsea discovering/TRITON SUB 1.png",
-            "6. International - Subsea discovering/TRITON SUB 3.png",
             "6. International - Subsea discovering/IMG 0.jpg",
             "6. International - Subsea discovering/IMG 1.jpg",
             "6. International - Subsea discovering/IMG 2.jpg",
             "6. International - Subsea discovering/IMG_6497.JPG",
             "6. International - Subsea discovering/IMG_6499.JPG",
-            "6. International - Subsea discovering/IMG_6528.JPG"
+            "6. International - Subsea discovering/IMG_6528.JPG",
+            "6. International - Subsea discovering/TRITON SUB 1.png",
+            "6. International - Subsea discovering/TRITON SUB 3.png",
+            "6. International - Subsea discovering/titre.jpeg"
           ]
         }
       ]
@@ -242,13 +257,18 @@
     {
       "nom": "International – Nomadic Floating Island",
       "description": "Create and deliver bespoke commercial floating island projects on a turnkey basis approved by maritime regulations.",
-      "partenaire": { "label": "Partner to go further:", "url": "www.bluehaven.world" },
+      "partenaire": {
+        "label": "Partner to go further:",
+        "url": "www.bluehaven.world"
+      },
       "cover": "7. NFI - Nomadic Floating Island/Concept/0 - IMG1.JPG",
       "phases": [
         {
           "nom": "Concept",
           "photos": [
-            "7. NFI - Nomadic Floating Island/Concept/0 - IMG1.JPG"
+            "7. NFI - Nomadic Floating Island/Concept/0 - IMG1.JPG",
+            "7. NFI - Nomadic Floating Island/Concept/NFI 3 - G.jpg",
+            "7. NFI - Nomadic Floating Island/Concept/NFI 4 - N52.jpg"
           ]
         },
         {
@@ -260,7 +280,9 @@
             "7. NFI - Nomadic Floating Island/Manufacturing/4 - IMG.JPG",
             "7. NFI - Nomadic Floating Island/Manufacturing/5 - IM.JPG",
             "7. NFI - Nomadic Floating Island/Manufacturing/6 - IMG.JPG",
-            "7. NFI - Nomadic Floating Island/Manufacturing/7 - IMG_9189.JPG"
+            "7. NFI - Nomadic Floating Island/Manufacturing/7 - IMG_9189.JPG",
+            "7. NFI - Nomadic Floating Island/Manufacturing/MAnufact NFI.jpg",
+            "7. NFI - Nomadic Floating Island/Manufacturing/Z.jpeg"
           ]
         },
         {
@@ -271,8 +293,10 @@
             "7. NFI - Nomadic Floating Island/Commissioning/91 - IMG1.jpg",
             "7. NFI - Nomadic Floating Island/Commissioning/91 - IMG2.jpg",
             "7. NFI - Nomadic Floating Island/Commissioning/92 - IMG.jpg",
-            "7. NFI - Nomadic Floating Island/Commissioning/93 - IMG.JPG",
-            "7. NFI - Nomadic Floating Island/Commissioning/93 - IMG_8091.jpeg"
+            "7. NFI - Nomadic Floating Island/Commissioning/commis 1.jpg",
+            "7. NFI - Nomadic Floating Island/Commissioning/commis 2.jpg",
+            "7. NFI - Nomadic Floating Island/Commissioning/commis 3.jpg",
+            "7. NFI - Nomadic Floating Island/Commissioning/commis 4.JPG"
           ]
         }
       ]
@@ -281,30 +305,76 @@
   "i18n": {
     "zh": {
       "eyebrow": "项目案例",
-      "titre": { "ligne1": "先进能力", "accent": "项目成就" },
-      "bouton": { "label": "查看所有项目" },
+      "titre": {
+        "ligne1": "先进能力",
+        "accent": "项目成就"
+      },
+      "bouton": {
+        "label": "查看所有项目"
+      },
       "projets": [
-        { "description": "基于双体船平台的新一代潜水支持船概念，具有最大稳定性和甲板空间。专为苛刻海况下的海洋及海底干预作业设计，配备专用设备区域及优化吊机覆盖范围。" },
-        { "description": "为巴西海军潜艇资质认证项目设计的高压测试舱（56吨）。用于对操作深度下的设备和人员程序进行认证，按DNV-GL标准制造，附全套可追溯性文档。" },
-        { "description": "为多个海上油气田国际运营商交付的一系列结构组件和工艺橇块。每台设备按客户规范制造，附全尺寸控制、焊接资质记录及船级社批准文件。" },
-        { "description": "为北海作业提供并调试的CMC300饱和潜水系统。与船舶DP及生命支持系统完全集成，通过深水部署认证，支持检测、维护及修复任务。" },
-        { "description": "为土耳其海军和北约设计、制造并调试的完整潜水支持系统，部署于多用途海上支持船。项目涵盖从工程设计到海上试航的完整范围，配备现场调试团队。" },
-        { "description": "深海探索（至1,000米水深）及科学调查任务。以深度自持、优化水动力学及全景观测系统为核心工程目标。" },
-        { "description": "以交钥匙方式，按照海事法规批准，设计并交付定制化商业浮岛项目。", "partenaire": { "label": "深入了解合作伙伴：", "url": "www.bluehaven.world" } }
+        {
+          "description": "基于双体船平台的新一代潜水支持船概念，具有最大稳定性和甲板空间。专为苛刻海况下的海洋及海底干预作业设计，配备专用设备区域及优化吊机覆盖范围。"
+        },
+        {
+          "description": "为巴西海军潜艇资质认证项目设计的高压测试舱（56吨）。用于对操作深度下的设备和人员程序进行认证，按DNV-GL标准制造，附全套可追溯性文档。"
+        },
+        {
+          "description": "为多个海上油气田国际运营商交付的一系列结构组件和工艺橇块。每台设备按客户规范制造，附全尺寸控制、焊接资质记录及船级社批准文件。"
+        },
+        {
+          "description": "为北海作业提供并调试的CMC300饱和潜水系统。与船舶DP及生命支持系统完全集成，通过深水部署认证，支持检测、维护及修复任务。"
+        },
+        {
+          "description": "为土耳其海军和北约设计、制造并调试的完整潜水支持系统，部署于多用途海上支持船。项目涵盖从工程设计到海上试航的完整范围，配备现场调试团队。"
+        },
+        {
+          "description": "深海探索（至1,000米水深）及科学调查任务。以深度自持、优化水动力学及全景观测系统为核心工程目标。"
+        },
+        {
+          "description": "以交钥匙方式，按照海事法规批准，设计并交付定制化商业浮岛项目。",
+          "partenaire": {
+            "label": "深入了解合作伙伴：",
+            "url": "www.bluehaven.world"
+          }
+        }
       ]
     },
     "tr": {
       "eyebrow": "Projeler",
-      "titre": { "ligne1": "Gelişmiş Yetenek", "accent": "başarılar" },
-      "bouton": { "label": "Tüm Projeleri Görüntüle" },
+      "titre": {
+        "ligne1": "Gelişmiş Yetenek",
+        "accent": "başarılar"
+      },
+      "bouton": {
+        "label": "Tüm Projeleri Görüntüle"
+      },
       "projets": [
-        { "description": "Maksimum stabilite ve güverte alanı için çift gövdeli platform üzerine inşa edilmiş yeni nesil Dalış Destek Gemisi konsepti. Zorlu deniz koşullarında açık deniz ve sualtı müdahale operasyonları için tasarlanmış, özel ekipman alanları ve optimize edilmiş vinç erişimi ile." },
-        { "description": "Brezilya Deniz Kuvvetleri'nin denizaltı yeterlilik programı için tasarlanan yüksek basınç test odası — 56 ton. Operasyonel derinliklerde ekipman ve ekip prosedürlerini sertifikalandırmak amacıyla üretilmiş, tam izlenebilirlik belgeleri ile DNV-GL standartlarına uygun." },
-        { "description": "Birden fazla açık deniz sahasındaki uluslararası operatörlere teslim edilen yapısal montajlar ve proses skid serileri. Her ünite müşteri spesifikasyonuna göre üretilmiş, tam boyut kontrolü, kaynak yeterlilik kayıtları ve sınıflandırma kuruluşu onayı ile." },
-        { "description": "Kuzey Denizi operasyonları için tedarik edilen ve devreye alınan CMC300 doygunluk dalış sistemi. Geminin DP ve yaşam destek sistemleriyle tam entegre, derin su konuşlanması için sertifikalı; muayene, bakım ve onarım görevlerini destekler." },
-        { "description": "Türk Deniz Kuvvetleri ve NATO için tasarlanan, üretilen ve devreye alınan tam dalış destek sistemi, çok amaçlı açık deniz destek gemisine konuşlandırıldı. Mühendislikten deniz denemelerine kadar tam proje kapsamı, saha devreye alma ekibiyle." },
-        { "description": "1.000 metre su derinliğine kadar derin deniz keşfi ve bilimsel araştırma görevleri. Derinlikte uzun süreli özerklik, optimize edilmiş hidrodinamik ve panoramik gözlem sistemleri için mühendislik çalışması." },
-        { "description": "Denizcilik mevzuatı onaylı, anahtar teslimi esasıyla özel ticari yüzen ada projeleri tasarlamak ve teslim etmek.", "partenaire": { "label": "Daha fazlası için ortak:", "url": "www.bluehaven.world" } }
+        {
+          "description": "Maksimum stabilite ve güverte alanı için çift gövdeli platform üzerine inşa edilmiş yeni nesil Dalış Destek Gemisi konsepti. Zorlu deniz koşullarında açık deniz ve sualtı müdahale operasyonları için tasarlanmış, özel ekipman alanları ve optimize edilmiş vinç erişimi ile."
+        },
+        {
+          "description": "Brezilya Deniz Kuvvetleri'nin denizaltı yeterlilik programı için tasarlanan yüksek basınç test odası — 56 ton. Operasyonel derinliklerde ekipman ve ekip prosedürlerini sertifikalandırmak amacıyla üretilmiş, tam izlenebilirlik belgeleri ile DNV-GL standartlarına uygun."
+        },
+        {
+          "description": "Birden fazla açık deniz sahasındaki uluslararası operatörlere teslim edilen yapısal montajlar ve proses skid serileri. Her ünite müşteri spesifikasyonuna göre üretilmiş, tam boyut kontrolü, kaynak yeterlilik kayıtları ve sınıflandırma kuruluşu onayı ile."
+        },
+        {
+          "description": "Kuzey Denizi operasyonları için tedarik edilen ve devreye alınan CMC300 doygunluk dalış sistemi. Geminin DP ve yaşam destek sistemleriyle tam entegre, derin su konuşlanması için sertifikalı; muayene, bakım ve onarım görevlerini destekler."
+        },
+        {
+          "description": "Türk Deniz Kuvvetleri ve NATO için tasarlanan, üretilen ve devreye alınan tam dalış destek sistemi, çok amaçlı açık deniz destek gemisine konuşlandırıldı. Mühendislikten deniz denemelerine kadar tam proje kapsamı, saha devreye alma ekibiyle."
+        },
+        {
+          "description": "1.000 metre su derinliğine kadar derin deniz keşfi ve bilimsel araştırma görevleri. Derinlikte uzun süreli özerklik, optimize edilmiş hidrodinamik ve panoramik gözlem sistemleri için mühendislik çalışması."
+        },
+        {
+          "description": "Denizcilik mevzuatı onaylı, anahtar teslimi esasıyla özel ticari yüzen ada projeleri tasarlamak ve teslim etmek.",
+          "partenaire": {
+            "label": "Daha fazlası için ortak:",
+            "url": "www.bluehaven.world"
+          }
+        }
       ]
     }
   }

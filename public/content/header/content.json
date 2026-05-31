@@ -4,8 +4,7 @@
     { "label": "About",     "ancre": "#about" },
     { "label": "Projects",  "ancre": "#projects" },
     { "label": "Video",     "ancre": "#video" },
-    { "label": "Locations", "ancre": "#locations" },
-    { "label": "Contact",   "ancre": "#contact" }
+    { "label": "Locations", "ancre": "#locations" }
   ],
   "boutonContact": { "label": "Contact us", "ancre": "#contact" },
   "langue": "EN",
@@ -15,8 +14,7 @@
         { "label": "关于我们" },
         { "label": "项目案例" },
         { "label": "视频" },
-        { "label": "分布地点" },
-        { "label": "联系我们" }
+        { "label": "分布地点" }
       ],
       "boutonContact": { "label": "联系我们" }
     },
@@ -25,8 +23,7 @@
         { "label": "Hakkımızda" },
         { "label": "Projeler" },
         { "label": "Video" },
-        { "label": "Konumlar" },
-        { "label": "İletişim" }
+        { "label": "Konumlar" }
       ],
       "boutonContact": { "label": "Bize Ulaşın" }
     }
