@@ -8,7 +8,12 @@
       "nom": "Türkiye",
       "description": "Naval and offshore engineering project in Turkey, featuring the design, manufacturing and commissioning of specialised underwater intervention systems for the Turkish Navy.",
       "videos": [
-        { "fichier": "3 - TURKIYE/Turkiye.mp4", "poster": "3 - TURKIYE/poster.jpg" }
+        { "fichier": "3 - TURKIYE/Turkiye.mp4", "poster": "3 - TURKIYE/poster.jpg" },
+        { "fichier": "3 - TURKIYE/Dynamic Monarch 2017 Trailer.mp4", "poster": "3 - TURKIYE/Dynamic Monarch 2017 Trailer.jpg" },
+        { "fichier": "3 - TURKIYE/CMC Briefing Bell.mp4", "poster": "3 - TURKIYE/CMC Briefing Bell.jpg" },
+        { "fichier": "3 - TURKIYE/CMC Dive Stage 1.mp4", "poster": "3 - TURKIYE/CMC Dive Stage 1.jpg" },
+        { "fichier": "3 - TURKIYE/CMC Inside Diving Bell.mp4", "poster": "3 - TURKIYE/CMC Inside Diving Bell.jpg" },
+        { "fichier": "3 - TURKIYE/CMC Outside Diving Bell.mp4", "poster": "3 - TURKIYE/CMC Outside Diving Bell.jpg" }
       ]
     },
     {

@@ -20,7 +20,7 @@ export default function Hero() {
         <img
           src={jpegUrl}
           alt=""
-          fetchPriority="high"
+          fetchpriority="high"
           decoding="async"
           className="hero-bg-img"
         />
