@@ -39,13 +39,21 @@ REGLES IMPORTANTES (sinon le site ne s'affiche plus) :
 Déposer la nouvelle image dans le dossier de la section, en
 GARDANT EXACTEMENT LE MEME NOM DE FICHIER que l'ancienne.
 Exemples :
-  - Fond du Hero        -> content/hero/background.jpg
+  - Fond du Hero        -> content/hero/background.jpg  ET  background.webp
+                           (remplacer LES DEUX : le site affiche la version
+                           .webp, plus légère ; convertir le .jpg en .webp
+                           avec https://squoosh.app)
   - Logo                -> content/header/logo.jpg  et  content/footer/logo.jpg
-  - Image vidéo (poster)-> content/video/poster.jpg
-  - Photos des projets  -> content/projects/images/project-1.jpg ... project-7.jpg
+  - Photo du dirigeant  -> content/contact/CEO.jpg
+  - Logos partenaires   -> content/locations/PAGE 5 - LOGO/
+  - Photos des projets  -> content/projects/<projet>/<phase>/
+                           ex. 1. Catamaran DSV offshore/Concept/CATA OFFSHORE 1.jpg
+  - Miniatures vidéo    -> voir la section VIDEO plus bas
 
-Pour AJOUTER un projet : déposer l'image dans content/projects/images/
-puis ajouter un bloc dans projects/content.json (copier un bloc existant).
+Pour AJOUTER une photo ou un projet : déposer l'image dans le dossier
+du projet, puis ajouter son chemin dans projects/content.json
+("cover" = image de couverture, "photos" = galerie de chaque phase ;
+pour un nouveau projet, copier un bloc existant).
 
 ------------------------------------------------------------
   SECTION "A PROPOS" : LES ICONES
@@ -65,6 +73,31 @@ La vidéo défile image par image au scroll. Pour la changer :
 2. Lancer le script "extraire-frames-about.ps1" situé à la racine
    du projet (clic droit > Exécuter avec PowerShell).
    Il découpe la vidéo en images et met tout à jour automatiquement.
+
+------------------------------------------------------------
+  SECTION VIDEO : AJOUTER OU REMPLACER UNE VIDEO
+------------------------------------------------------------
+Les vidéos sont rangées par projet dans content/video/
+(ex. "4 - SUBSEA DISCOVERING/Triton submarine.mp4").
+Chaque vidéo a sa miniature .jpg du même nom.
+
+1. Préparer la vidéo AVANT de la déposer :
+   - format .mp4 uniquement (les .mov et .m4v ne sont pas lus
+     correctement par tous les navigateurs)
+   - 1280 x 720 pixels, environ 2 Mbit/s
+   - MOINS DE 100 Mo par fichier (limite imposée par GitHub)
+   Les vidéos de téléphone ou de caméra (souvent en 4K) sont bien
+   trop lourdes : les compresser avec le logiciel gratuit HandBrake
+   (préréglage "Fast 720p30").
+2. Préparer la miniature : une image .jpg de 1280 x 720 pixels,
+   avec le même nom que la vidéo (ex. Triton submarine.jpg).
+3. Déposer les deux fichiers dans le dossier du projet.
+4. Dans video/content.json, ajouter ou modifier la ligne du projet :
+     { "fichier": "4 - SUBSEA DISCOVERING/Triton submarine.mp4",
+       "poster": "4 - SUBSEA DISCOVERING/Triton submarine.jpg" }
+   Plusieurs vidéos = plusieurs lignes séparées par une virgule ;
+   elles s'enchaînent dans l'ordre.
+5. Supprimer l'ancienne vidéo et son ancienne miniature.
 
 ------------------------------------------------------------
   CARTE DU MONDE (section Implantations)
